@@ -15,7 +15,7 @@ export default function Training() {
       projects: '5+ Real Projects',
       difficulty: 'Beginner',
       icon: 'Code',
-      color: '#10b981',
+      color: '#ff5500',
       topics: ['UI/UX', 'React', 'Git', 'API'],
       desc: 'Master the art of building modern, responsive web applications from the ground up.',
     },
@@ -26,7 +26,7 @@ export default function Training() {
       projects: 'SaaS Platform',
       difficulty: 'Intermediate',
       icon: 'Layers',
-      color: '#059669',
+      color: '#ff661b',
       topics: ['Auth', 'Database', 'Scaling', 'Cloud'],
       desc: 'Deep dive into enterprise-level backend architecture and scalable PHP systems.',
     },
@@ -37,7 +37,7 @@ export default function Training() {
       projects: 'Lab Simulation',
       difficulty: 'Beginner',
       icon: 'ShieldCheck',
-      color: '#34d399',
+      color: '#ffa044',
       topics: ['Networking', 'Hardware', 'Security', 'OS'],
       desc: 'The foundation of tech. Master networking, hardware, and professional system security.',
     },
@@ -45,10 +45,10 @@ export default function Training() {
 
   const studentReviews: StudentReview[] = [
     {
-      name: 'Jean de Dieu',
-      role: 'Frontend Developer',
-      text: 'I started with zero coding knowledge. Within 8 weeks, I built my first portfolio and landed an internship!',
-      company: 'TechRwanda',
+      name: 'Remy Nsanzimana',
+      role: 'L4SWD Student Coordinator',
+      text: 'Being at Kivumu TSS, my full-stack coding and system setups scaled in real-time. The level 4 software development cohort is building top-tier systems!',
+      company: 'EAV Kivumu TSS',
     },
     {
       name: 'Aline Marie',
@@ -99,7 +99,7 @@ _Sent from InfinityMura Training Section_`;
           <h2 className="text-4xl font-serif italic text-stone-850 tracking-tight">
             Professional Tech Training
           </h2>
-          <div className="h-px w-12 bg-emerald-500/30 mx-auto mt-4" />
+          <div className="h-px w-12 bg-orange-500/30 mx-auto mt-4" />
         </div>
 
         {/* Course Cards Grid */}
@@ -112,19 +112,19 @@ _Sent from InfinityMura Training Section_`;
             return (
               <div
                 key={course.id}
-                className="bg-white border border-stone-200/80 hover:border-emerald-500/20 hover:bg-[#f9f8f6]/50 rounded-[32px] p-8 flex flex-col justify-between transition-all duration-300 transform hover:scale-[1.01] cursor-pointer group shadow-sm"
+                className="bg-white border border-stone-200/80 hover:border-orange-500/20 hover:bg-[#f9f8f6]/50 rounded-[32px] p-8 flex flex-col justify-between transition-all duration-300 transform hover:scale-[1.01] cursor-pointer group shadow-sm"
               >
                 <div>
                   {/* Card head layout */}
                   <div className="flex items-center justify-between mb-6">
                     <div
-                      className="w-12 h-12 rounded-xl bg-stone-50 border border-stone-200 text-stone-600 group-hover:text-emerald-600 group-hover:border-emerald-500/20 group-hover:bg-emerald-50 transition-colors duration-300 flex items-center justify-center"
+                      className="w-12 h-12 rounded-xl bg-stone-50 border border-stone-200 text-stone-600 group-hover:text-[#ff5500] group-hover:border-orange-500/20 group-hover:bg-orange-50/10 transition-colors duration-300 flex items-center justify-center"
                     >
                       <IconClass className="w-5 h-5" />
                     </div>
                     {/* Course tag specifications */}
                     <div className="flex flex-col items-end gap-1">
-                      <span className="text-stone-600 text-[9px] font-mono px-3 py-1 rounded-full uppercase tracking-wider bg-stone-50 border border-stone-200 group-hover:border-emerald-500/10 group-hover:text-emerald-650 transition-colors">
+                      <span className="text-stone-600 text-[9px] font-mono px-3 py-1 rounded-full uppercase tracking-wider bg-stone-50 border border-stone-200 group-hover:border-orange-500/20 group-hover:text-[#ff5500] transition-colors">
                         {course.duration}
                       </span>
                       <span className="text-stone-400 font-bold text-[9px] uppercase tracking-wider">
@@ -133,7 +133,7 @@ _Sent from InfinityMura Training Section_`;
                     </div>
                   </div>
 
-                  <h3 className="font-serif italic text-stone-800 text-lg mb-3 group-hover:text-emerald-600 transition-colors">
+                  <h3 className="font-serif italic text-stone-800 text-lg mb-3 group-hover:text-[#ff5500] transition-colors">
                     {course.title}
                   </h3>
                   <p className="text-stone-500 text-xs sm:text-sm leading-relaxed mb-6">
@@ -149,7 +149,7 @@ _Sent from InfinityMura Training Section_`;
                       {course.topics.map((topic, tIdx) => (
                         <span
                           key={tIdx}
-                          className="text-[10px] font-mono px-3 py-1.5 bg-[#fcfbfa] border border-stone-200 text-stone-500 rounded-md hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-500/20 transition-all cursor-pointer"
+                          className="text-[10px] font-mono px-3 py-1.5 bg-[#fcfbfa] border border-stone-200 text-stone-500 rounded-md hover:bg-orange-50/10 hover:text-[#ff5500] hover:border-orange-500/20 transition-all cursor-pointer"
                         >
                           {topic}
                         </span>
@@ -161,7 +161,7 @@ _Sent from InfinityMura Training Section_`;
                 {/* Card CTA */}
                 <button
                   onClick={() => handleEnrollClick(course)}
-                  className="w-full border border-emerald-500/30 hover:border-emerald-500 hover:bg-emerald-50/20 text-emerald-600 hover:text-emerald-700 font-bold text-xs uppercase tracking-[0.16em] py-3.5 rounded-full text-center transition-all duration-200 cursor-pointer text-stone-800 bg-emerald-50/10"
+                  className="w-full border border-orange-500/30 hover:border-[#ff5500] hover:bg-orange-50/10 text-[#ff5500] hover:text-[#e04b00] font-bold text-xs uppercase tracking-[0.16em] py-3.5 rounded-full text-center transition-all duration-200 cursor-pointer text-stone-800 bg-[#ff5500]/5"
                 >
                   Enroll in Cohort
                 </button>
@@ -179,7 +179,7 @@ _Sent from InfinityMura Training Section_`;
             <h4 className="text-2xl font-serif italic text-stone-850">
               What Students Say
             </h4>
-            <div className="h-px w-12 bg-emerald-500/30 mx-auto mt-4" />
+            <div className="h-px w-12 bg-orange-500/30 mx-auto mt-4" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -189,9 +189,9 @@ _Sent from InfinityMura Training Section_`;
                 className="bg-white p-6 rounded-2xl border border-stone-200/60 hover:border-stone-300 hover:bg-[#fcfbfa]/50 flex flex-col justify-between transition-all duration-300 cursor-pointer shadow-sm"
               >
                 <div>
-                  <div className="flex items-center gap-1 text-emerald-500 mb-4 animate-pulse">
+                  <div className="flex items-center gap-1 text-orange-500 mb-4 animate-pulse">
                     {[1, 2, 3, 4, 5].map((s) => (
-                      <Star key={s} className="w-3 h-3 fill-emerald-500 text-emerald-500" />
+                      <Star key={s} className="w-3 h-3 fill-orange-500 text-orange-500" />
                     ))}
                   </div>
                   <p className="text-stone-600 text-xs sm:text-sm leading-relaxed italic mb-8 relative">
@@ -232,7 +232,7 @@ _Sent from InfinityMura Training Section_`;
 
               <div className="text-center mb-6 mt-2">
                 <div
-                  className="w-11 h-11 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-3"
+                  className="w-11 h-11 rounded-full bg-orange-50/10 border border-orange-500/20 text-[#ff5500] flex items-center justify-center mx-auto mb-3"
                 >
                   <Award className="w-5 h-5" />
                 </div>
@@ -253,7 +253,7 @@ _Sent from InfinityMura Training Section_`;
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Full Name"
-                    className="w-full border border-stone-200 p-3.5 rounded-xl bg-white outline-none focus:border-emerald-500 text-sm transition-all text-stone-800"
+                    className="w-full border border-stone-200 p-3.5 rounded-xl bg-white outline-none focus:border-[#ff5500] text-sm transition-all text-stone-800"
                   />
                 </div>
 
@@ -267,13 +267,13 @@ _Sent from InfinityMura Training Section_`;
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="E.g., +250 788 000 000"
-                    className="w-full border border-stone-200 p-3.5 rounded-xl bg-white outline-none focus:border-emerald-500 text-sm transition-all text-stone-800"
+                    className="w-full border border-stone-200 p-3.5 rounded-xl bg-white outline-none focus:border-[#ff5500] text-sm transition-all text-stone-800"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-[0.2em] p-3.5 rounded-xl transition-all mt-6 cursor-pointer shadow-md shadow-emerald-500/10"
+                  className="w-full bg-[#ff5500] hover:bg-[#e04b00] text-white font-bold text-xs uppercase tracking-[0.2em] p-3.5 rounded-xl transition-all mt-6 cursor-pointer shadow-md shadow-orange-500/10"
                 >
                   Request Enrollment
                 </button>

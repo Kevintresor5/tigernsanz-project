@@ -7,10 +7,10 @@ export default function Testimonials() {
       id: 1,
       name: 'Jean Claude',
       role: 'Co-Founder, TechStart Rwanda',
-      quote: 'Schadrack is exceptional at both developing robust systems and teaching the next generation of engineers.',
+      quote: 'Remy is exceptional at both developing robust systems and teaching the next generation of engineers.',
       avatar: 'J',
       rating: 5,
-      color: '#eb7604',
+      color: '#ff5500',
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ export default function Testimonials() {
       quote: 'His technical support is swift, professional, and reliable. Truly a valuable asset.',
       avatar: 'A',
       rating: 5,
-      color: '#e4973b',
+      color: '#ff661b',
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ export default function Testimonials() {
       quote: 'We collaborated on several fintech and API gateways. Excellence in code.',
       avatar: 'P',
       rating: 5,
-      color: '#b6252a',
+      color: '#ff8833',
     },
     {
       id: 4,
@@ -37,18 +37,18 @@ export default function Testimonials() {
       quote: 'A reliable software partner. Delivered our retail e-commerce platform on time with outstanding scalability.',
       avatar: 'D',
       rating: 5,
-      color: '#10b981',
+      color: '#ffa044',
     },
   ];
 
   const handleWhatsappPartnership = () => {
     const recipient = '250791767725';
-    const text = `Hi Schadrack, I read your testimonials and would like to explore a potential partnership with InfinityMura.`;
+    const text = `Hi Remy, I read your testimonials and would like to explore a potential partnership with InfinityMura.`;
     window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (
-    <section id="testimonials" className="py-24 bg-[#0a0a0a] border-t border-stone-900 relative select-none">
+    <section id="testimonials" className="py-24 bg-[#070913] border-t border-stone-900 relative select-none animate-fade-in">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Title */}
@@ -71,9 +71,9 @@ export default function Testimonials() {
             >
               <div>
                 {/* Rating score */}
-                <div className="flex items-center gap-1 text-stone-500 mb-5">
+                <div className="flex items-center gap-1 text-orange-500 mb-5">
                   {Array.from({ length: test.rating }).map((_, rIdx) => (
-                    <Star key={rIdx} className="w-3 h-3 fill-stone-500 text-stone-500" />
+                    <Star key={rIdx} className="w-3 h-3 fill-orange-500 text-orange-500" />
                   ))}
                 </div>
 
@@ -115,7 +115,7 @@ export default function Testimonials() {
           </div>
           <button
             onClick={handleWhatsappPartnership}
-            className="w-full sm:w-auto bg-stone-100 hover:bg-white text-[#0a0a0a] font-bold text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-all duration-205 flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto bg-[#ff5500] hover:bg-[#e04b00] text-white font-bold text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-all duration-205 flex items-center justify-center gap-2 cursor-pointer shadow-md shadow-orange-500/10"
           >
             <Send className="w-4 h-4" />
             Discuss Partnership

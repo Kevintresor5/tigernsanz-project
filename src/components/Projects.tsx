@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { ExternalLink, Filter, Laptop, X, Send } from 'lucide-react';
+import { ExternalLink, Filter, Laptop, X, Send, Search } from 'lucide-react';
 import { Project } from '../types';
 
 export default function Projects() {
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const projectsList: Project[] = [
     {
@@ -127,17 +128,35 @@ export default function Projects() {
       details: 'Streamlines administrative tasks and improves communication with church members via SMS integration.',
       accent: '#047857',
     },
+    {
+      id: 13,
+      category: 'System',
+      title: 'Remy Nsanzimana DevHub • Kivumu TSS',
+      description: 'Advanced real-time workstation & education gateway built for EAV Kivumu TSS L4SWD class.',
+      tech: ['React', 'TypeScript', 'Tailwind', 'Git'],
+      image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop',
+      details: 'Co-developed and designed by student Remy Nsanzimana representing Level 4 Software Development (L4SWD) at EAV Kivumu Technical Secondary School (TSS), mentored under the supervision of InfinityMura.',
+      accent: '#ff5500',
+    },
   ];
 
   const filterCategories = ['All', 'Web App', 'System', 'Fintech', 'AI', 'IT Tool'];
 
-  const filteredProjects = selectedFilter === 'All'
-    ? projectsList
-    : projectsList.filter(p => p.category === selectedFilter);
+  const filteredProjects = projectsList.filter(p => {
+    const matchesCategory = selectedFilter === 'All' || p.category === selectedFilter;
+    const query = searchQuery.toLowerCase().trim();
+    if (!query) return matchesCategory;
+
+    const matchesTitle = p.title.toLowerCase().includes(query);
+    const matchesTech = p.tech.some(t => t.toLowerCase().includes(query));
+    const matchesDesc = p.description.toLowerCase().includes(query) || p.details.toLowerCase().includes(query);
+
+    return matchesCategory && (matchesTitle || matchesTech || matchesDesc);
+  });
 
   const triggerProjectWhatsApp = (project: Project) => {
     const recipient = '250791767725';
-    const msg = `Hi Schadrack, I'm reviewing your portfolio and would like to inquire about your project: *${project.title}* (${project.category}).`;
+    const msg = `Hi Remy, I'm reviewing your portfolio and would like to inquire about your project: *${project.title}* (${project.category}).`;
     window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
@@ -146,7 +165,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Title corresponding to Screenshot 3 */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400 block mb-2.5">
             OUR PORTFOLIO
           </span>
@@ -157,6 +176,29 @@ export default function Projects() {
             A showcase of high-performance systems and creative web applications designed to scale businesses.
           </p>
           <div className="h-px w-12 bg-orange-500/25 mx-auto mt-6" />
+        </div>
+
+        {/* Real-Time Search Bar Component */}
+        <div className="max-w-md mx-auto mb-10">
+          <div className="relative">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search spec or tech (e.g. React, Remy, L4SWD)..."
+              className="w-full px-5 py-3.5 pl-11 bg-white border border-stone-200 text-stone-850 placeholder-stone-400 text-xs rounded-full outline-none focus:border-[#ff5500]/50 focus:ring-2 focus:ring-[#ff5500]/5 text-ellipsis transition-all shadow-sm"
+            />
+            <Search className="w-4 h-4 text-stone-400 absolute left-4 top-1/2 -translate-y-1/2" />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => setSearchQuery('')}
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-0.5 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-500 transition-all cursor-pointer"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Filter Navigation Bar matching Screenshot 3 */}
@@ -171,65 +213,75 @@ export default function Projects() {
                   : 'bg-white border-stone-200 text-stone-500 hover:text-stone-850 hover:bg-stone-50'
               }`}
             >
-              {cat === 'All' && <Filter className="w-3 h-3" style={{ color: selectedFilter === 'All' ? '#ffffff' : '#f97316' }} />}
+              {cat === 'All' && <Filter className="w-3 h-3" style={{ color: selectedFilter === 'All' ? '#ffffff' : '#ff5500' }} />}
               {cat}
             </button>
           ))}
         </div>
 
         {/* Grid Display of Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, idx) => (
-            <div
-              key={project.id}
-              onClick={() => setActiveProject(project)}
-              className="bg-white rounded-[24px] border border-stone-200/80 overflow-hidden hover:border-[#ff5500]/40 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group cursor-pointer"
-            >
-              <div>
-                {/* Visual Thumbnail Banner with full active color */}
-                <div className="aspect-[16:11] w-full bg-stone-50 relative overflow-hidden border-b border-stone-150">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover opacity-95 group-hover:scale-[1.03] transition-transform duration-500"
-                  />
-                  {/* Category Float tag */}
-                  <div className="absolute top-4 right-4 bg-white/95 backdrop-blur border border-stone-200 text-stone-700 font-mono text-[9px] px-3 py-1.5 rounded-full uppercase tracking-widest group-hover:border-[#ff5500]/25 group-hover:text-[#ff5500] transition-all duration-300 relative z-10 shadow-sm">
-                    {project.category}
+        {filteredProjects.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project, idx) => (
+              <div
+                key={project.id}
+                onClick={() => setActiveProject(project)}
+                className="bg-white rounded-[24px] border border-stone-200/80 overflow-hidden hover:border-[#ff5500]/40 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+              >
+                <div>
+                  {/* Visual Thumbnail Banner with full active color */}
+                  <div className="aspect-[16:11] w-full bg-stone-50 relative overflow-hidden border-b border-stone-150">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover opacity-95 group-hover:scale-[1.03] transition-transform duration-500"
+                    />
+                    {/* Category Float tag */}
+                    <div className="absolute top-4 right-4 bg-white/95 backdrop-blur border border-stone-200 text-stone-700 font-mono text-[9px] px-3 py-1.5 rounded-full uppercase tracking-widest group-hover:border-[#ff5500]/25 group-hover:text-[#ff5500] transition-all duration-300 relative z-10 shadow-sm">
+                      {project.category}
+                    </div>
+                  </div>
+
+                  <div className="p-6">
+                    {/* Technology tokens */}
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {project.tech.map((tag, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="text-[9px] font-mono font-bold tracking-wide uppercase px-2 py-0.5 bg-stone-50 text-stone-500 rounded border border-stone-200/60"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <h3 className="font-bold text-stone-900 text-lg mb-2 leading-snug group-hover:text-[#ff5500] transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-stone-500 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
+                      {project.description}
+                    </p>
                   </div>
                 </div>
 
-                <div className="p-6">
-                  {/* Technology tokens */}
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {project.tech.map((tag, tIdx) => (
-                      <span
-                        key={tIdx}
-                        className="text-[9px] font-mono font-bold tracking-wide uppercase px-2 py-0.5 bg-stone-50 text-stone-500 rounded border border-stone-200/60"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <h3 className="font-bold text-stone-900 text-lg mb-2 leading-snug group-hover:text-[#ff5500] transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-stone-500 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
+                {/* Card bottom actions in clean light theme style */}
+                <div className="p-6 pt-0 border-t border-stone-100/60 flex items-center justify-between text-[11px] font-bold tracking-wider text-stone-400 group-hover:text-[#ff5500] transition-colors mt-auto">
+                  <span>View Case Study</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-stone-300 group-hover:text-[#ff5500] group-hover:translate-x-0.5 transition-all" />
                 </div>
               </div>
-
-              {/* Card bottom actions in clean light theme style */}
-              <div className="p-6 pt-0 border-t border-stone-100/60 flex items-center justify-between text-[11px] font-bold tracking-wider text-stone-400 group-hover:text-[#ff5500] transition-colors mt-auto">
-                <span>View Case Study</span>
-                <ExternalLink className="w-3.5 h-3.5 text-stone-300 group-hover:text-[#ff5500] group-hover:translate-x-0.5 transition-all" />
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-16 bg-white border border-stone-200/60 rounded-[32px] p-8 max-w-lg mx-auto shadow-sm">
+            <Laptop className="w-10 h-10 text-stone-300 mx-auto mb-4 animate-pulse" />
+            <h4 className="text-base font-serif italic text-stone-800 mb-2">No projects found</h4>
+            <p className="text-stone-400 text-xs sm:text-sm">
+              We couldn't find any projects matching "{searchQuery}". Try editing your query or clearing limits!
+            </p>
+          </div>
+        )}
 
       </div>
 

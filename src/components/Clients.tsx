@@ -44,7 +44,7 @@ export default function Clients() {
           <h2 className="text-3xl font-serif text-stone-850 italic tracking-tight">
             Trusted By Leading Organizations
           </h2>
-          <div className="h-px w-12 bg-emerald-500/30 mx-auto mt-4" />
+          <div className="h-px w-12 bg-orange-500/30 mx-auto mt-4" />
         </div>
 
         {/* Column layout for Ecosystem partners */}
@@ -52,7 +52,7 @@ export default function Clients() {
           {ecosystemItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-stone-200/70 hover:border-emerald-500/30 hover:bg-emerald-50/20 rounded-2xl p-6 min-h-[120px] flex flex-col items-center justify-center transition-all duration-300 hover:scale-[1.02] group cursor-pointer shadow-sm"
+              className="bg-white border border-stone-200/70 hover:border-[#ff5500]/30 hover:bg-orange-50/10 rounded-2xl p-6 min-h-[120px] flex flex-col items-center justify-center transition-all duration-300 hover:scale-[1.02] group cursor-pointer shadow-sm"
             >
               <img
                 src={item.logo}
@@ -69,7 +69,7 @@ export default function Clients() {
                 title={item.name}
               />
               <div 
-                className="hidden text-xs font-semibold text-center text-stone-500 group-hover:text-emerald-600 transition-colors flex flex-col items-center justify-center font-mono"
+                className="hidden text-xs font-semibold text-center text-stone-500 group-hover:text-[#ff5500] transition-colors flex flex-col items-center justify-center font-mono"
               >
                 {item.fallback}
               </div>

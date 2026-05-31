@@ -7,7 +7,7 @@ export default function Services() {
       id: 1,
       icon: 'Code',
       title: 'Software Development',
-      accent: '#10b981',
+      accent: '#ff5500',
       description: 'Custom, scalable digital products built with modern frameworks.',
       items: ['Web Applications', 'Mobile Solutions', 'Custom APIs'],
     },
@@ -15,7 +15,7 @@ export default function Services() {
       id: 2,
       icon: 'GraduationCap',
       title: 'Tech Training',
-      accent: '#34d399',
+      accent: '#ff661b',
       description: 'Empowering the next generation with professional digital literacy.',
       items: ['Full-stack Development', 'Essential Computer Skills', 'Digital Literacy'],
     },
@@ -23,7 +23,7 @@ export default function Services() {
       id: 3,
       icon: 'Laptop',
       title: 'Professional IT Support',
-      accent: '#059669',
+      accent: '#ff8833',
       description: 'Reliable hardware and software maintenance for your business.',
       items: ['Network Security', 'Hardware Repair', 'System Recovery'],
     },
@@ -31,7 +31,7 @@ export default function Services() {
       id: 4,
       icon: 'Cog',
       title: 'Digital Consulting',
-      accent: '#047857',
+      accent: '#ffaa66',
       description: 'Strategic roadmap for your business digital transformation.',
       items: ['Cloud Strategy', 'Workflow Automation', 'Tech Audits'],
     },
@@ -56,7 +56,7 @@ export default function Services() {
           <h2 className="text-4xl font-serif italic text-stone-850 tracking-tight">
             Premium Services
           </h2>
-          <div className="h-px w-12 bg-emerald-500/30 mx-auto mt-4" />
+          <div className="h-px w-12 bg-orange-500/30 mx-auto mt-4" />
         </div>
 
         {/* Services Cards Grid Layout */}
@@ -71,23 +71,23 @@ export default function Services() {
             return (
               <div
                 key={service.id}
-                className="bg-white rounded-[32px] p-7 border border-stone-200/80 hover:border-emerald-500/20 hover:bg-emerald-50/10 transition-all duration-300 flex flex-col justify-between group cursor-pointer shadow-sm"
+                className="bg-white rounded-[32px] p-7 border border-stone-200/80 hover:border-[#ff5500]/20 hover:bg-orange-50/10 transition-all duration-300 flex flex-col justify-between group cursor-pointer shadow-sm"
               >
                 <div>
                   {/* Top Header container with accent and logo */}
                   <div className="flex items-center justify-between mb-6">
                     <div
-                      className="w-11 h-11 rounded-xl flex items-center justify-center bg-stone-50 text-stone-600 border border-stone-200 group-hover:text-emerald-600 group-hover:border-emerald-500/20 group-hover:bg-emerald-50 transition-all duration-300"
+                      className="w-11 h-11 rounded-xl flex items-center justify-center bg-stone-50 text-stone-600 border border-stone-200 group-hover:text-[#ff5500] group-hover:border-[#ff5500]/20 group-hover:bg-orange-50/10 transition-all duration-300"
                     >
                       <IconClass className="w-4 h-4" />
                     </div>
                     {/* Tiny visual badge */}
-                    <div className="text-stone-300 group-hover:text-emerald-500 transition-colors">
+                    <div className="text-stone-300 group-hover:text-[#ff5500] transition-colors">
                       <ChevronRight className="w-4 h-4" />
                     </div>
                   </div>
 
-                  <h3 className="font-serif italic text-stone-800 text-lg mb-2 leading-snug group-hover:text-emerald-600 transition-colors">
+                  <h3 className="font-serif italic text-stone-800 text-lg mb-2 leading-snug group-hover:text-[#ff5500] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-stone-500 text-xs sm:text-sm mb-6 leading-relaxed">
@@ -101,7 +101,7 @@ export default function Services() {
                     {service.items.map((subItem, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-[11px] font-mono text-stone-500 group-hover:text-stone-800 transition-colors">
                         <div
-                          className="w-1 h-1 bg-emerald-500"
+                          className="w-1 h-1 bg-[#ff5500]"
                         />
                         {subItem}
                       </li>
@@ -135,10 +135,10 @@ export default function Services() {
               return (
                 <div key={idx} className="flex flex-col items-center text-center relative group">
                   {/* Outer circle with step index indicator */}
-                  <div className="w-14 h-14 rounded-full bg-stone-50 border border-stone-200 text-stone-500 group-hover:border-emerald-500/40 group-hover:text-emerald-600 flex items-center justify-center relative z-10 transition-all cursor-pointer">
+                  <div className="w-14 h-14 rounded-full bg-stone-50 border border-stone-200 text-stone-500 group-hover:border-[#ff5500]/40 group-hover:text-[#ff5500] flex items-center justify-center relative z-10 transition-all cursor-pointer">
                     <StepIcon className="w-5 h-5" />
                     {/* Index float bubble */}
-                    <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-white border border-stone-200 text-stone-450 font-mono text-[9px] flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white group-hover:border-emerald-500 transition-all">
+                    <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-white border border-stone-200 text-stone-450 font-mono text-[9px] flex items-center justify-center group-hover:bg-[#ff5500] group-hover:text-white group-hover:border-[#ff5500] transition-all">
                       0{idx + 1}
                     </div>
                   </div>

@@ -200,7 +200,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
                 </div>
                 <button 
                   onClick={() => {
-                    const msg = encodeURIComponent("Hi Schadrack, I'm interested in purchasing enrollment for the Advanced Fullstack Engineering Course (3-Months). Can we talk?");
+                    const msg = encodeURIComponent("Hi Remy, I'm interested in purchasing enrollment for the Advanced Fullstack Engineering Course (3-Months). Can we talk?");
                     window.open(`https://wa.me/250791767725?text=${msg}`, '_blank');
                   }}
                   className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-2 rounded-lg shrink-0"
@@ -217,7 +217,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
                 </div>
                 <button 
                   onClick={() => {
-                    const msg = encodeURIComponent("Hi Schadrack, I'm interested in a custom School ERP License customisation for our institution. Can I get a quote?");
+                    const msg = encodeURIComponent("Hi Remy, I'm interested in a custom School ERP License customisation for our institution. Can I get a quote?");
                     window.open(`https://wa.me/250791767725?text=${msg}`, '_blank');
                   }}
                   className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-2 rounded-lg shrink-0"
@@ -234,7 +234,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
                 </div>
                 <button 
                   onClick={() => {
-                    const msg = encodeURIComponent("Hi Schadrack, I'm looking to buy the Tailored E-Commerce Suite for my online retail store. Let's talk details!");
+                    const msg = encodeURIComponent("Hi Remy, I'm looking to buy the Tailored E-Commerce Suite for my online retail store. Let's talk details!");
                     window.open(`https://wa.me/250791767725?text=${msg}`, '_blank');
                   }}
                   className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-2 rounded-lg shrink-0"

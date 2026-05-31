@@ -19,7 +19,7 @@ export default function Contact() {
       setIsSent(true);
 
       // Trigger standard mailto for backup
-      const mailtoUrl = `mailto:muragijimanaschadrack183@gmail.com?subject=Portfolio Inquiry&body=${encodeURIComponent(
+      const mailtoUrl = `mailto:remynsanzimana@gmail.com?subject=Portfolio Inquiry&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
       )}`;
       
@@ -36,13 +36,13 @@ export default function Contact() {
 
   const handleQuickWhatsApp = () => {
     const recipient = '250791767725';
-    const text = 'Hi Schadrack, I just saw your portfolio and would like to hire your software services.';
+    const text = 'Hi Remy, I just saw your portfolio and would like to hire your software services.';
     window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   const handleBookMeeting = () => {
     const recipient = '250791767725';
-    const text = 'Hi Schadrack, I would like to book a meeting with you to discuss a custom software collaboration project.';
+    const text = 'Hi Remy, I would like to book a meeting with you to discuss a custom software collaboration project.';
     window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
@@ -180,7 +180,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={6}
-                      placeholder="Hi Schadrack, I have a project idea..."
+                      placeholder="Hi Remy, I have a project idea..."
                       className="w-full p-4 border border-stone-200 bg-stone-50/50 text-stone-850 placeholder-stone-300 outline-none rounded-xl focus:border-stone-450 focus:bg-white text-sm font-semibold transition-all resize-none"
                     />
                   </div>

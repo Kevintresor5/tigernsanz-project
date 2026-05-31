@@ -25,8 +25,8 @@ export default function Hero({ onExploreCourses, onGetStarted }: HeroProps) {
 
       {/* Modern cybernetic background accent points */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-[20%] right-[10%] w-[450px] h-[450px] bg-emerald-500/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[10%] left-[25%] w-[350px] h-[350px] bg-orange-500/5 rounded-full blur-[100px]" />
+        <div className="absolute top-[20%] right-[10%] w-[450px] h-[450px] bg-orange-500/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[10%] left-[25%] w-[350px] h-[350px] bg-orange-600/5 rounded-full blur-[100px]" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col justify-center flex-grow">
@@ -91,7 +91,7 @@ export default function Hero({ onExploreCourses, onGetStarted }: HeroProps) {
                 <div className="w-[100px] h-[100px] rounded-full p-[3px] bg-[#070913] border border-stone-800 shadow-xl overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
                   <img
                     src={ownerProfileImg}
-                    alt="Schadrack Profile"
+                    alt="Remy Profile"
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>
@@ -107,7 +107,7 @@ export default function Hero({ onExploreCourses, onGetStarted }: HeroProps) {
                 </div>
                 
                 <h3 className="text-2xl font-serif italic text-white mb-2 font-medium tracking-wide">
-                  Schadrack Muragijimana
+                  Remy Nsanzimana
                 </h3>
                 
                 <div className="h-px w-[60px] mx-auto bg-stone-800 my-4" />
