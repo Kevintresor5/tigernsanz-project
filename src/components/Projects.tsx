@@ -142,33 +142,33 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-slate-50 border-t border-slate-100 select-none">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-24 bg-[#0a0a0a] border-t border-stone-900 select-none">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Title */}
-        <div className="text-center mb-12">
-          <span className="text-xs uppercase tracking-[3px] font-black text-orange-500 block mb-2">
+        <div className="text-center mb-16">
+          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-500 block mb-2">
             PORTFOLIO SHOWCASE
           </span>
-          <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-4xl font-serif italic text-stone-100 tracking-tight">
             Featured Projects
           </h2>
-          <div className="h-[4px] w-12 bg-orange-500 mx-auto mt-4 rounded-full" />
+          <div className="h-px w-12 bg-stone-700 mx-auto mt-4" />
         </div>
 
         {/* Filter Navigation Bar */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12 select-none">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-16 select-none">
           {filterCategories.map((cat, idx) => (
             <button
               key={idx}
               onClick={() => setSelectedFilter(cat)}
-              className={`px-4.5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 flex items-center gap-1.5 cursor-pointer ${
+              className={`px-5 py-2 rounded-full text-[10px] uppercase font-bold tracking-[0.18em] transition-all duration-200 flex items-center gap-1.5 cursor-pointer ${
                 selectedFilter === cat
-                  ? 'bg-orange-500 text-white shadow-md shadow-orange-500/10'
-                  : 'bg-white border border-slate-150 text-slate-500 hover:text-slate-800 hover:bg-slate-50'
+                  ? 'bg-stone-100 text-[#0a0a0a]'
+                  : 'bg-stone-950/40 border border-stone-900 text-stone-500 hover:text-stone-300 hover:bg-stone-900/40'
               }`}
             >
-              {cat === 'All' && <Filter className="w-4 h-4 text-orange-500" style={{ color: selectedFilter === 'All' ? 'white' : '#eb7604' }} />}
+              {cat === 'All' && <Filter className="w-3 h-3 text-stone-400" style={{ color: selectedFilter === 'All' ? '#0a0a0a' : '#78716c' }} />}
               {cat}
             </button>
           ))}
@@ -180,19 +180,19 @@ export default function Projects() {
             <div
               key={project.id}
               onClick={() => setActiveProject(project)}
-              className="bg-white rounded-3xl border border-slate-100/80 overflow-hidden hover:shadow-2xl hover:shadow-slate-300/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+              className="bg-stone-950/40 rounded-[32px] border border-stone-900 overflow-hidden hover:border-stone-750 hover:bg-stone-900/10 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
             >
               <div>
                 {/* Visual Thumbnail Banner */}
-                <div className="aspect-[16:10] w-full bg-slate-100 relative overflow-hidden">
+                <div className="aspect-[16:10] w-full bg-stone-950 relative overflow-hidden border-b border-stone-900">
                   <img
                     src={project.image}
                     alt={project.title}
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-102"
                   />
                   {/* Category Float tag */}
-                  <div className="absolute top-4 left-4 bg-slate-900/80 backdrop-blur border border-white/10 text-white font-extrabold text-[10px] px-3 py-1.5 rounded-lg uppercase tracking-wider">
+                  <div className="absolute top-4 left-4 bg-stone-950/90 backdrop-blur border border-stone-850 text-stone-300 font-mono text-[9px] px-3 py-1.5 rounded-full uppercase tracking-widest">
                     {project.category}
                   </div>
                 </div>
@@ -203,26 +203,26 @@ export default function Projects() {
                     {project.tech.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="text-[10px] font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded"
+                        className="text-[9px] font-mono px-2 py-1 bg-stone-900 text-stone-400 rounded border border-stone-850/60"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <h3 className="font-extrabold text-slate-800 text-lg mb-2 leading-snug group-hover:text-orange-500 transition-colors">
+                  <h3 className="font-serif italic text-stone-200 text-lg mb-2 leading-snug group-hover:text-stone-100 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-4 line-clamp-2">
+                  <p className="text-stone-550 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-2">
                     {project.description}
                   </p>
                 </div>
               </div>
 
               {/* Card bottom actions */}
-              <div className="p-6 pt-0 border-t border-slate-50 flex items-center justify-between text-xs font-bold text-slate-400 group-hover:text-slate-800 transition-colors mt-auto">
+              <div className="p-6 pt-0 border-t border-stone-900/40 flex items-center justify-between text-[11px] font-bold tracking-wider text-stone-500 group-hover:text-stone-200 transition-colors mt-auto">
                 <span>View Case Study</span>
-                <ExternalLink className="w-4 h-4 text-slate-350 group-hover:text-orange-500 group-hover:translate-x-0.5 transition-all" />
+                <ExternalLink className="w-3.5 h-3.5 text-stone-600 group-hover:text-stone-300 group-hover:translate-x-0.5 transition-all" />
               </div>
             </div>
           ))}
@@ -232,10 +232,10 @@ export default function Projects() {
 
       {/* DETAIL DRAWER / MODAL SHEETS */}
       {activeProject && (
-        <div className="fixed inset-0 bg-[#0f172a]/75 backdrop-blur-sm flex items-center justify-center z-50 p-4 select-none">
-          <div className="bg-white rounded-3xl shadow-2xl border border-slate-100 max-w-2xl w-full max-h-[90vh] overflow-hidden animate-[fadeIn_0.3s_ease-out] flex flex-col justify-between">
+        <div className="fixed inset-0 bg-[#060606]/90 backdrop-blur-sm flex items-center justify-center z-50 p-4 select-none">
+          <div className="bg-stone-950 rounded-3xl border border-stone-900 max-w-2xl w-full max-h-[90vh] overflow-hidden animate-[fadeIn_0.3s_ease-out] flex flex-col justify-between">
             {/* Header banner */}
-            <div className="relative aspect-[16:8] w-full bg-slate-100 overflow-hidden flex-shrink-0">
+            <div className="relative aspect-[16:8] w-full bg-stone-950 overflow-hidden flex-shrink-0 border-b border-stone-900">
               <img
                 src={activeProject.image}
                 alt={activeProject.title}
@@ -244,11 +244,11 @@ export default function Projects() {
               />
               <button
                 onClick={() => setActiveProject(null)}
-                className="absolute top-4 right-4 p-2 bg-slate-900/75 backdrop-blur-md text-white hover:bg-slate-800 rounded-xl transition-colors cursor-pointer"
+                className="absolute top-4 right-4 p-2 bg-stone-950/90 backdrop-blur-md text-stone-300 hover:text-stone-100 rounded-full border border-stone-800 transition-colors cursor-pointer"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4" />
               </button>
-              <div className="absolute bottom-4 left-4 bg-slate-900/80 backdrop-blur-md text-white font-extrabold text-xs px-3.5 py-1.5 rounded-lg uppercase tracking-widest border border-white/10">
+              <div className="absolute bottom-4 left-4 bg-stone-950/90 backdrop-blur-md text-stone-300 font-mono text-[9px] px-3.5 py-1.5 rounded-full uppercase tracking-widest border border-stone-850">
                 {activeProject.category}
               </div>
             </div>
@@ -256,30 +256,30 @@ export default function Projects() {
             {/* Scrollable specs description */}
             <div className="p-6 sm:p-8 overflow-y-auto flex-grow space-y-6">
               <div>
-                <h3 className="font-extrabold text-slate-900 text-2xl mb-2">
+                <h3 className="font-serif italic text-stone-100 text-2xl mb-2">
                   {activeProject.title}
                 </h3>
-                <p className="text-slate-400 text-sm italic font-medium leading-relaxed">
+                <p className="text-stone-400 text-xs sm:text-sm italic leading-relaxed">
                   {activeProject.description}
                 </p>
               </div>
 
-              <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
-                <h5 className="font-bold text-slate-750 text-sm mb-2">Project Overview</h5>
-                <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
+              <div className="bg-[#0c0c0c] p-5 rounded-2xl border border-stone-900">
+                <h5 className="font-serif italic text-stone-300 text-sm mb-2">Project Overview</h5>
+                <p className="text-stone-500 text-xs sm:text-sm leading-relaxed">
                   {activeProject.details}
                 </p>
               </div>
 
               <div>
-                <h6 className="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-3">
+                <h6 className="text-[10px] uppercase font-bold tracking-widest text-stone-500 mb-3">
                   Involved Technologies
                 </h6>
                 <div className="flex flex-wrap gap-2">
                   {activeProject.tech.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="text-xs font-bold px-4 py-2 bg-slate-100 text-slate-600 rounded-xl"
+                      className="text-[10px] font-mono px-3.5 py-2 bg-stone-900 text-stone-450 border border-stone-850 rounded-full"
                     >
                       {tag}
                     </span>
@@ -289,10 +289,10 @@ export default function Projects() {
             </div>
 
             {/* CTA panel absolute bottom position */}
-            <div className="p-6 border-t border-slate-100 flex items-center justify-between gap-4 flex-shrink-0 bg-white">
+            <div className="p-6 border-t border-stone-900 flex items-center justify-between gap-4 flex-shrink-0 bg-stone-950">
               <button
                 onClick={() => triggerProjectWhatsApp(activeProject)}
-                className="w-full bg-orange-500 text-white font-bold py-3.5 rounded-xl hover:bg-orange-600 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full bg-stone-100 hover:bg-white text-[#0a0a0a] font-bold text-xs uppercase tracking-[0.2em] py-4 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Send className="w-4 h-4" />
                 Inquire Project Collaboration

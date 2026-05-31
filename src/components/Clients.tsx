@@ -33,34 +33,26 @@ export default function Clients() {
   ];
 
   return (
-    <section id="clients" className="py-16 bg-[#0B0F19] text-white overflow-hidden relative border-y border-white/5">
-      {/* Glow ambient circle */}
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-orange-500/5 blur-[100px] pointer-events-none rounded-full" />
-      <div className="absolute top-0 left-0 w-80 h-80 bg-indigo-500/5 blur-[100px] pointer-events-none rounded-full" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="clients" className="py-20 bg-[#0a0a0a] text-[#e5e5e5] relative border-y border-stone-900">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Header content */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <div className="w-6 h-[2px] bg-amber-500/50" />
-            <h6 className="text-xs uppercase tracking-[4px] font-black text-orange-500">
-              Our Ecosystem
-            </h6>
-            <div className="w-6 h-[2px] bg-amber-500/50" />
-          </div>
-          <h2 className="text-3xl font-black text-white tracking-tight">
+        <div className="text-center mb-16">
+          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-500 block mb-3">
+            OUR ECOSYSTEM
+          </span>
+          <h2 className="text-3xl font-serif text-stone-100 italic tracking-tight">
             Trusted By Leading Organizations
           </h2>
-          <div className="h-[4px] w-24 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mt-4 rounded-full" />
+          <div className="h-px w-12 bg-stone-700 mx-auto mt-4" />
         </div>
 
         {/* Column layout for Ecosystem partners */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {ecosystemItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white/5 border border-white/5 hover:border-amber-500/30 hover:bg-white/10 rounded-2xl p-6 min-h-[120px] flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-500/5 group cursor-pointer"
+              className="bg-stone-950/40 border border-stone-900 hover:border-stone-750 hover:bg-stone-900/40 rounded-2xl p-6 min-h-[120px] flex flex-col items-center justify-center transition-all duration-300 hover:scale-[1.02] group cursor-pointer"
             >
               <img
                 src={item.logo}
@@ -73,11 +65,11 @@ export default function Clients() {
                   const sibling = target.nextElementSibling as HTMLDivElement;
                   if (sibling) sibling.style.display = 'flex';
                 }}
-                className="max-h-[55px] max-w-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                className="max-h-[48px] max-w-full object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
                 title={item.name}
               />
               <div 
-                className="hidden text-xs font-bold text-center text-slate-400 group-hover:text-white transition-colors flex-col items-center justify-center"
+                className="hidden text-xs font-semibold text-center text-stone-400 group-hover:text-stone-200 transition-colors flex flex-col items-center justify-center font-mono"
               >
                 {item.fallback}
               </div>

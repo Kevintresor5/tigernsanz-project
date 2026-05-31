@@ -2,6 +2,7 @@
 
 @theme {
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
@@ -9,27 +10,29 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
+  background-color: #0a0a0a;
 }
 
 body {
-  background-color: #f8fafc;
-  color: #0f172a;
+  background-color: #0a0a0a;
+  color: #e5e5e5;
   overflow-x: hidden;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #111111;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 5px;
+  background: #2a2a2a;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #444444;
 }
 
 /* Modern Animations */
@@ -114,14 +117,15 @@ body {
   width: 100%;
   padding: 0.85rem 1rem 0.85rem 2.75rem;
   border-radius: 0.75rem;
-  border: 1px solid #e2e8f0;
-  background-color: #f8fafc;
+  border: 1px solid #292524;
+  background-color: #121212;
+  color: #f5f5f5;
   outline: none;
   transition: all 0.3s ease;
 }
 
 .form-input-styled:focus {
-  border-color: #eb7604;
-  background-color: #ffffff;
-  box-shadow: 0 0 0 3px rgba(235, 118, 4, 0.1);
+  border-color: #78716c;
+  background-color: #0d0d0d;
+  box-shadow: 0 0 0 3px rgba(120, 113, 108, 0.15);
 }

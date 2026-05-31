@@ -37,51 +37,53 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-slate-900/95 backdrop-blur-md shadow-lg py-3 border-b border-white/5'
-            : 'bg-transparent py-5'
+            ? 'bg-[#0a0a0a]/90 backdrop-blur-md py-4 border-b border-stone-900'
+            : 'bg-transparent py-6'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between h-14">
             {/* Logo */}
             <div
-              className="flex items-center gap-2 cursor-pointer group"
+              className="flex items-center gap-3 cursor-pointer group"
               onClick={() => handleLinkClick('hero')}
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-400 to-amber-500 flex items-center justify-center text-white font-black text-xl shadow-md shadow-orange-500/20 group-hover:scale-105 transition-all">
-                I
+              <div className="w-8 h-8 border border-stone-600 rounded-full flex items-center justify-center group-hover:border-stone-400 transition-all duration-300">
+                <div className="w-1.5 h-1.5 bg-stone-100 rounded-full" />
               </div>
-              <span className="text-xl font-black text-white tracking-tight group-hover:text-orange-400 transition-colors">
-                Infinity<span className="text-orange-500">Mura</span>
+              <span className="text-xs font-bold tracking-[0.4em] uppercase text-stone-100 group-hover:text-white transition-colors">
+                InfinityMura
               </span>
             </div>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex items-center gap-1">
-              <ul className="flex items-center gap-1 mr-4">
+            <div className="hidden lg:flex items-center gap-8">
+              <ul className="flex items-center gap-8">
                 {navItems.map((item) => (
                   <li key={item.id}>
                     <button
                       onClick={() => handleLinkClick(item.id)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 cursor-pointer ${
+                      className={`text-[10px] uppercase tracking-[0.2em] font-medium transition-all duration-300 cursor-pointer relative py-1 ${
                         activeSection === item.id
-                          ? 'text-orange-400 bg-white/5'
-                          : 'text-slate-300 hover:text-white hover:bg-white/5'
+                          ? 'text-stone-100'
+                          : 'text-stone-400 hover:text-stone-200'
                       }`}
                     >
                       {item.name}
+                      {activeSection === item.id && (
+                        <span className="absolute bottom-0 left-0 right-0 h-px bg-stone-100 animate-pulse" />
+                      )}
                     </button>
                   </li>
                 ))}
               </ul>
 
-              {/* Chat on WhatsApp Button */}
+              {/* Sophisticated Inquire Button */}
               <button
                 onClick={() => handleLinkClick('contact')}
-                className="bg-orange-500 text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-orange-600 transition-all shadow-md shadow-orange-500/10 flex items-center gap-1 hover:translate-y-[-2px] duration-150 cursor-pointer"
+                className="border border-stone-700 hover:border-stone-400 text-stone-200 hover:text-white px-5 py-2 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] transition-all duration-300 cursor-pointer"
               >
-                Inquire Now
-                <ArrowUpRight className="w-4 h-4" />
+                Inquire
               </button>
             </div>
 
@@ -89,9 +91,9 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
             <div className="flex lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="inline-flex items-center justify-center p-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 focus:outline-none transition-all cursor-pointer"
+                className="inline-flex items-center justify-center p-2 rounded-full border border-stone-800 text-stone-400 hover:text-white hover:bg-stone-900 focus:outline-none transition-all cursor-pointer"
               >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
               </button>
             </div>
           </div>
@@ -99,31 +101,30 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
 
         {/* Mobile menu, show/hide based on menu state. */}
         <div
-          className={`lg:hidden transition-all duration-300 ease-in-out border-b border-white/5 bg-slate-950/98 ${
-            isOpen ? 'max-h-screen opacity-100 py-4' : 'max-h-0 opacity-0 overflow-hidden'
+          className={`lg:hidden transition-all duration-300 ease-in-out border-b border-stone-900 bg-[#0a0a0a] ${
+            isOpen ? 'max-h-screen opacity-100 py-6' : 'max-h-0 opacity-0 overflow-hidden'
           }`}
         >
-          <div className="px-4 space-y-2">
+          <div className="px-6 space-y-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleLinkClick(item.id)}
-                className={`block w-full text-left px-4 py-3 rounded-xl text-base font-medium transition-all ${
+                className={`block w-full text-left py-2 text-[10px] uppercase tracking-[0.2em] font-medium transition-all ${
                   activeSection === item.id
-                    ? 'text-orange-500 bg-white/5 font-bold'
-                    : 'text-slate-300 hover:text-white hover:bg-white/5'
+                    ? 'text-stone-100 border-l border-stone-400 pl-3 font-bold'
+                    : 'text-stone-400 hover:text-stone-200'
                 }`}
               >
                 {item.name}
               </button>
             ))}
-            <div className="pt-4 border-t border-white/5">
+            <div className="pt-4 border-t border-stone-900">
               <button
                 onClick={() => handleLinkClick('contact')}
-                className="w-full bg-orange-500 text-white py-3.5 rounded-xl font-bold hover:bg-orange-600 transition-all text-center flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full text-center border border-stone-700 hover:border-stone-400 text-stone-200 hover:text-white py-3 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] transition-all duration-300 cursor-pointer"
               >
                 Inquire Now
-                <ArrowUpRight className="w-4 h-4" />
               </button>
             </div>
           </div>

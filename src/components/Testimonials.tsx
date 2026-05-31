@@ -48,18 +48,18 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-white relative select-none">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-24 bg-[#0a0a0a] border-t border-stone-900 relative select-none">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Title */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[3px] font-black text-orange-500 block mb-2">
+          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-500 block mb-2">
             CLIENT VOUCHERS
           </span>
-          <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-4xl font-serif italic text-stone-100 tracking-tight">
             Testimonials
           </h2>
-          <div className="h-[4px] w-12 bg-orange-500 mx-auto mt-4 rounded-full" />
+          <div className="h-px w-12 bg-stone-700 mx-auto mt-4" />
         </div>
 
         {/* Testimonials grid layout */}
@@ -67,35 +67,34 @@ export default function Testimonials() {
           {testimonials.map((test) => (
             <div
               key={test.id}
-              className="bg-slate-50 border border-slate-100/50 hover:bg-white hover:border-slate-150 p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-slate-200/50 transform hover:-translate-y-1 group cursor-pointer"
+              className="bg-stone-950/40 border border-stone-900 hover:border-stone-750 hover:bg-stone-900/10 p-8 rounded-[32px] flex flex-col justify-between transition-all duration-300 transform hover:scale-[1.01] group cursor-pointer"
             >
               <div>
                 {/* Rating score */}
-                <div className="flex items-center gap-1 text-amber-400 mb-5">
+                <div className="flex items-center gap-1 text-stone-500 mb-5">
                   {Array.from({ length: test.rating }).map((_, rIdx) => (
-                    <Star key={rIdx} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    <Star key={rIdx} className="w-3 h-3 fill-stone-500 text-stone-500" />
                   ))}
                 </div>
 
-                <p className="text-slate-500 text-sm sm:text-base leading-relaxed italic mb-8 relative">
-                  <Quote className="w-10 h-10 text-orange-500/10 absolute -top-5 -left-4 -z-0" />
+                <p className="text-stone-400 text-xs sm:text-sm leading-relaxed italic mb-8 relative">
+                  <Quote className="w-8 h-8 text-stone-900/40 absolute -top-4 -left-3 -z-0" />
                   <span className="relative z-10">"{test.quote}"</span>
                 </p>
               </div>
 
               {/* Author item card info */}
-              <div className="flex items-center gap-3 pt-5 border-t border-slate-100 mt-auto">
+              <div className="flex items-center gap-3 pt-5 border-t border-stone-900 mt-auto">
                 <div
-                  className="w-12 h-12 rounded-full font-black text-white flex items-center justify-center text-base"
-                  style={{ backgroundColor: test.color }}
+                  className="w-10 h-10 rounded-full bg-stone-900 border border-stone-800 text-stone-300 font-serif italic flex items-center justify-center text-sm font-semibold"
                 >
                   {test.avatar}
                 </div>
                 <div>
-                  <h6 className="font-extrabold text-slate-800 text-base mb-0.5 leading-none">
+                  <h6 className="font-serif italic text-stone-200 text-sm leading-tight">
                     {test.name}
                   </h6>
-                  <p className="text-slate-400 text-xs font-bold leading-none uppercase">
+                  <p className="text-stone-500 text-[9px] font-mono uppercase mt-0.5">
                     {test.role}
                   </p>
                 </div>
@@ -105,18 +104,18 @@ export default function Testimonials() {
         </div>
 
         {/* Partnership invitation block banner */}
-        <div className="relative overflow-hidden bg-slate-900 text-white rounded-[32px] p-8 sm:p-10 border border-white/5 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="relative overflow-hidden bg-stone-950 text-stone-200 rounded-[32px] p-8 sm:p-10 border border-stone-900 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-center sm:text-left">
-            <h4 className="text-lg sm:text-xl font-extrabold mb-1">
+            <h4 className="text-lg font-serif italic text-stone-100 mb-1">
               Have a Large Project or Venture?
             </h4>
-            <p className="text-slate-400 text-xs sm:text-sm">
+            <p className="text-stone-500 text-xs sm:text-sm">
               Let's join forces and build reliable tech solutions for your organization.
             </p>
           </div>
           <button
             onClick={handleWhatsappPartnership}
-            className="w-full sm:w-auto bg-orange-500 text-white font-bold px-8 py-4 rounded-xl hover:bg-orange-600 active:scale-98 transition-all duration-205 flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-orange-500/15"
+            className="w-full sm:w-auto bg-stone-100 hover:bg-white text-[#0a0a0a] font-bold text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-all duration-205 flex items-center justify-center gap-2 cursor-pointer"
           >
             <Send className="w-4 h-4" />
             Discuss Partnership

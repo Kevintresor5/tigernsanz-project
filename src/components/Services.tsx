@@ -45,22 +45,22 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-slate-50 border-t border-slate-100 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 select-none">
+    <section id="services" className="py-24 bg-[#0a0a0a] border-t border-stone-900 relative">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 select-none">
         
         {/* Header section */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[3px] font-black text-orange-500 block mb-2">
+          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-500 block mb-2">
             WHAT WE OFFER
           </span>
-          <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-4xl font-serif italic text-stone-100 tracking-tight">
             Premium Services
           </h2>
-          <div className="h-[4px] w-12 bg-orange-500 mx-auto mt-4 rounded-full" />
+          <div className="h-px w-12 bg-stone-700 mx-auto mt-4" />
         </div>
 
         {/* Services Cards Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           {serviceList.map((service) => {
             let IconClass = Code;
             if (service.icon === 'Code') IconClass = Code;
@@ -71,42 +71,37 @@ export default function Services() {
             return (
               <div
                 key={service.id}
-                className="bg-white rounded-3xl p-6 border border-slate-100 hover:border-orange-500/10 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+                className="bg-stone-950/40 rounded-[32px] p-7 border border-stone-900 hover:border-stone-750 hover:bg-stone-900/10 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
               >
                 <div>
                   {/* Top Header container with accent and logo */}
                   <div className="flex items-center justify-between mb-6">
                     <div
-                      className="w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300"
-                      style={{
-                        backgroundColor: `${service.accent}15`,
-                        color: service.accent,
-                      }}
+                      className="w-11 h-11 rounded-xl flex items-center justify-center bg-stone-900 text-stone-300 border border-stone-850 group-hover:text-stone-100 transition-colors"
                     >
-                      <IconClass className="w-5 h-5" />
+                      <IconClass className="w-4 h-4" />
                     </div>
                     {/* Tiny visual badge */}
-                    <div className="text-slate-200 group-hover:text-amber-500 transition-colors">
-                      <ChevronRight className="w-5 h-5" />
+                    <div className="text-stone-700 group-hover:text-stone-400 transition-colors">
+                      <ChevronRight className="w-4 h-4" />
                     </div>
                   </div>
 
-                  <h3 className="font-bold text-slate-800 text-lg mb-2 leading-snug group-hover:text-orange-500 transition-colors">
+                  <h3 className="font-serif italic text-stone-200 text-lg mb-2 leading-snug group-hover:text-stone-100 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-slate-400 text-sm mb-6 leading-relaxed">
+                  <p className="text-stone-500 text-xs sm:text-sm mb-6 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
 
                 {/* Sublist entries */}
-                <div className="border-t border-slate-50 pt-4 mt-auto">
+                <div className="border-t border-stone-900 pt-4 mt-auto">
                   <ul className="space-y-2">
                     {service.items.map((subItem, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-xs font-bold text-slate-500">
+                      <li key={idx} className="flex items-center gap-2 text-[11px] font-mono text-stone-400">
                         <div
-                          className="w-1.5 h-1.5 rounded-full"
-                          style={{ backgroundColor: service.accent }}
+                          className="w-1 h-1 bg-stone-700"
                         />
                         {subItem}
                       </li>
@@ -119,13 +114,13 @@ export default function Services() {
         </div>
 
         {/* Workflow steps block */}
-        <div className="bg-white rounded-[40px] border border-slate-100 p-8 sm:p-12 shadow-xl">
-          <div className="text-center mb-10">
-            <h4 className="text-2xl font-black text-slate-800 tracking-tight mb-2">
-              Our Professional Process
+        <div className="bg-stone-950/40 rounded-[32px] border border-stone-900 p-8 sm:p-12">
+          <div className="text-center mb-12">
+            <h4 className="text-2xl font-serif text-stone-200 italic mb-2">
+              Our Process
             </h4>
-            <p className="text-slate-400 text-sm">
-              How we turn your digital ideas into scalable solutions.
+            <p className="text-stone-500 text-xs sm:text-sm font-mono uppercase tracking-wider">
+              From creative consultation to scalable solution.
             </p>
           </div>
 
@@ -140,24 +135,24 @@ export default function Services() {
               return (
                 <div key={idx} className="flex flex-col items-center text-center relative group">
                   {/* Outer circle with step index indicator */}
-                  <div className="w-16 h-16 rounded-full bg-slate-50 border border-slate-100 group-hover:border-orange-500 group-hover:bg-white flex items-center justify-center text-slate-700 group-hover:text-orange-500 transition-all duration-350 shadow-sm relative z-10 cursor-pointer">
-                    <StepIcon className="w-6 h-6" />
+                  <div className="w-14 h-14 rounded-full bg-stone-900 border border-stone-850 text-stone-400 group-hover:border-stone-550 group-hover:text-stone-100 flex items-center justify-center relative z-10 transition-all cursor-pointer">
+                    <StepIcon className="w-5 h-5" />
                     {/* Index float bubble */}
-                    <div className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-slate-100 border border-slate-100 text-slate-600 font-extrabold text-[10px] flex items-center justify-center shadow-inner group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500 transition-all">
+                    <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-stone-950 border border-stone-850 text-stone-400 font-mono text-[9px] flex items-center justify-center group-hover:bg-stone-100 group-hover:text-stone-950 group-hover:border-stone-100 transition-all">
                       0{idx + 1}
                     </div>
                   </div>
 
-                  <h5 className="font-bold text-slate-800 text-base mt-4 mb-1">
+                  <h5 className="font-serif italic text-stone-300 text-base mt-4 mb-1">
                     {step.title}
                   </h5>
-                  <p className="text-slate-400 text-xs font-semibold max-w-[180px]">
+                  <p className="text-stone-500 text-[11px] font-mono">
                     {step.desc}
                   </p>
 
                   {/* Horizontal line indicators between columns */}
                   {idx < 3 && (
-                    <div className="hidden lg:block absolute top-8 left-[calc(50%+4rem)] w-[calc(100%-8rem)] h-[2px] bg-slate-150 relative z-0" />
+                    <div className="hidden lg:block absolute top-[28px] left-[calc(50%+3.5rem)] w-[calc(100%-7rem)] h-[1px] bg-stone-900/60 relative z-0" />
                   )}
                 </div>
               );

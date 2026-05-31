@@ -61,7 +61,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white antialiased">
+    <div className="min-h-screen flex flex-col justify-between selection:bg-stone-800 selection:text-stone-100 antialiased bg-[#0a0a0a]">
       {/* Dynamic Nav layer */}
       <Navbar activeSection={activeSection} onNavigate={navigateToSection} />
 
