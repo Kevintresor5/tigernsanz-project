@@ -21,11 +21,11 @@ export default function Footer({ onScrollToTop }: FooterProps) {
           {/* Logo and short bio */}
           <div className="md:col-span-8 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-full border border-stone-850 font-serif italic text-stone-200 flex items-center justify-center text-xs font-semibold bg-stone-950">
+              <div className="w-8 h-8 rounded-full border border-emerald-950 font-serif italic text-emerald-400 flex items-center justify-center text-xs font-semibold bg-[#0a0a0a]">
                 I
               </div>
               <span className="text-xl font-serif italic text-stone-100 tracking-tight">
-                Infinity<span className="text-stone-400">Mura</span>
+                Infinity<span className="text-emerald-400">Mura</span>
               </span>
             </div>
             <p className="text-stone-550 text-xs sm:text-sm max-w-lg leading-relaxed mx-auto md:mx-0">
@@ -43,7 +43,7 @@ export default function Footer({ onScrollToTop }: FooterProps) {
                   href={social.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-10 h-10 bg-stone-950 border border-stone-900 hover:bg-stone-900 hover:text-stone-100 hover:border-stone-800 rounded-full flex items-center justify-center text-stone-500 transition-all duration-300 transform hover:-translate-y-0.5"
+                  className="w-10 h-10 bg-stone-950 border border-stone-900 hover:bg-emerald-950/10 hover:text-emerald-450 hover:border-emerald-500/20 rounded-full flex items-center justify-center text-stone-500 transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   <IconClass className="w-4 h-4" />
                 </a>
@@ -57,16 +57,16 @@ export default function Footer({ onScrollToTop }: FooterProps) {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] uppercase tracking-[0.15em] font-bold text-stone-500">
           <p>© {currentYear} InfinityMura. All rights reserved.</p>
 
-          <p className="flex items-center gap-1.5 hover:text-stone-300 transition-colors">
-            Made with <Heart className="w-3.5 h-3.5 text-stone-500" /> in Musanze
+          <p className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
+            Made with <Heart className="w-3.5 h-3.5 text-emerald-500 fill-emerald-500/30 animate-pulse" /> in Musanze
           </p>
 
           <button
             onClick={onScrollToTop}
-            className="p-3 bg-stone-950 border border-stone-900 hover:border-stone-800 hover:bg-stone-900 rounded-full transition-all duration-300 group cursor-pointer"
+            className="p-3 bg-stone-950 border border-stone-900 hover:border-emerald-500/20 hover:bg-emerald-950/10 rounded-full transition-all duration-300 group cursor-pointer"
             title="Scroll to Top"
           >
-            <ArrowUp className="w-3.5 h-3.5 text-stone-500 group-hover:text-stone-200 group-hover:scale-105 duration-200" />
+            <ArrowUp className="w-3.5 h-3.5 text-stone-500 group-hover:text-emerald-400 group-hover:scale-105 duration-200" />
           </button>
         </div>
       </div>

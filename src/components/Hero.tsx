@@ -1,6 +1,6 @@
-import { Play, Send, CheckCircle2 } from 'lucide-react';
+import { MessageCircle, ArrowRight, Star } from 'lucide-react';
 
-const heroGraffiti = new URL('../assets/images/hero_graffiti_1780258294803.png', import.meta.url).href;
+const ownerProfileImg = new URL('../assets/images/owner_profile_1780260030406.png', import.meta.url).href;
 
 interface HeroProps {
   onExploreCourses: () => void;
@@ -11,91 +11,108 @@ export default function Hero({ onExploreCourses, onGetStarted }: HeroProps) {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col justify-center relative overflow-hidden bg-[#0a0a0a] text-[#e5e5e5] pt-32 pb-20 px-6 sm:px-8 lg:px-12"
+      className="min-h-screen flex flex-col justify-center relative overflow-hidden bg-[#070913] text-[#e5e5e5] pt-32 pb-20 px-6 sm:px-8 lg:px-12"
     >
-      {/* Decorative Sophisticated Dark background lines */}
-      <div className="absolute inset-0 pointer-events-none z-0 opacity-15">
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] border border-stone-800 rotate-45 rounded-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] border border-stone-850 -rotate-12 rounded-full" />
+      {/* Immersive faded background portrait of the founder on the left */}
+      <div 
+        className="absolute left-0 bottom-0 top-0 w-full lg:w-[50%] opacity-20 lg:opacity-35 pointer-events-none z-0 mix-blend-luminosity bg-no-repeat bg-[#070913]"
+        style={{
+          backgroundImage: `radial-gradient(circle at center, transparent 30%, #070913 90%), url(${ownerProfileImg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 15%',
+        }}
+      />
+
+      {/* Modern cybernetic background accent points */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="absolute top-[20%] right-[10%] w-[450px] h-[450px] bg-emerald-500/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[10%] left-[25%] w-[350px] h-[350px] bg-orange-500/5 rounded-full blur-[100px]" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col justify-center flex-grow">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Hero Left Content */}
-          <div className="lg:col-span-7 flex flex-col items-center lg:items-start select-none">
+          {/* Hero Left Content aligned with screenshot */}
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left select-none">
             
             {/* Elegant Minimal Badge */}
-            <div className="mb-8 inline-flex items-center gap-2.5 px-4 py-2 border border-stone-800 rounded-full text-[10px] uppercase tracking-[0.25em] text-stone-400 bg-stone-900/40">
-              <span className="w-1.5 h-1.5 bg-stone-500 rounded-full animate-pulse" />
+            <div className="mb-6 inline-flex items-center gap-2.5 px-4 py-1.5 border border-orange-500/25 rounded-full text-[10px] uppercase tracking-[0.25em] text-orange-400 bg-orange-950/20">
+              <span className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse" />
               Rwanda’s Tech Catalyst
             </div>
 
             {/* Premium Serif Display Title */}
-            <h1 className="text-5xl sm:text-7xl lg:text-[100px] leading-[0.85] font-serif text-stone-100 tracking-tight text-center lg:text-left mb-8">
-              Digital <br />
-              <span className="italic text-stone-400 block mt-2 lg:ml-20">Symmetry</span>
+            <h1 className="text-5xl sm:text-7xl lg:text-[84px] leading-tight font-sans font-black tracking-tight text-white mb-6">
+              Infinity<span className="text-[#ff5500]">_Mura</span>
             </h1>
 
-            {/* Refined Border Subtitle */}
-            <div className="border-l border-stone-700 pl-6 text-left max-w-xl mb-12">
-              <p className="text-base font-semibold text-stone-200 tracking-wide mb-1.5">
-                Software <span className="text-stone-500 font-normal">•</span> Training{' '}
-                <span className="text-stone-500 font-normal">•</span> IT Solutions
-              </p>
-              <p className="text-[10px] font-bold text-stone-500 tracking-[0.25em] uppercase">
-                Established / Musanze, Rwanda / Est. 2024
+            {/* Refined Custom Subtitle Border Layout */}
+            <div className="bg-[#0b0e1b]/70 backdrop-blur-md p-5 rounded-2xl border border-stone-800/80 mb-10 max-w-xl">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 text-xs sm:text-sm font-semibold tracking-wide text-stone-200 mb-2 font-mono">
+                <span>Software</span> 
+                <span className="text-[#ff5500]">•</span> 
+                <span className="text-[#ff5500]">Training</span> 
+                <span className="text-[#ff5500]">•</span> 
+                <span>IT Solutions</span>
+              </div>
+              <p className="text-[9px] font-bold text-stone-400 tracking-[0.3em] uppercase">
+                — PROUDLY BUILT IN MUSANZE —
               </p>
             </div>
 
-            {/* Actions: Thin elegant outline + Solid premium light button */}
+            {/* Actions: Get Started with WhatsApp styling + Outline Explore Courses */}
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+              {/* Request Service / Get Started button with embedded WhatsApp logo */}
               <button
                 onClick={onGetStarted}
-                className="w-full sm:w-auto bg-stone-100 text-[#0a0a0a] hover:bg-white px-8 py-3.5 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-black/30"
+                className="w-full sm:w-auto bg-[#ff5500] hover:bg-[#e04b00] text-white px-8 py-4 rounded-full font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer shadow-lg shadow-orange-500/20 active:scale-[0.98]"
               >
+                {/* Embedded custom elegant minimal WhatsApp logo */}
+                <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.437.002 9.861-4.417 9.864-9.864.001-2.636-1.02-5.115-2.875-6.973C16.398 1.91 13.922.887 11.997.887c-5.446 0-9.873 4.42-9.876 9.865-.001 1.983.518 3.921 1.5 5.626L2.647 20.9l4.511-1.182z"/>
+                </svg>
                 Get Started
               </button>
               <button
                 onClick={onExploreCourses}
-                className="w-full sm:w-auto border border-stone-800 text-stone-300 hover:text-white hover:border-stone-600 px-8 py-3.5 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto border border-stone-700 text-stone-200 hover:text-white hover:border-white px-8 py-4 rounded-full font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-[#0b0e1b]/30 backdrop-blur"
               >
                 Explore Courses
               </button>
             </div>
           </div>
 
-          {/* Hero Right Media Box matching architectural frame */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end relative mt-10 lg:mt-0">
-            <div className="relative max-w-[420px] w-full aspect-[4/5] bg-stone-950 rounded-3xl overflow-hidden shadow-2xl border border-stone-900 group transition-all duration-500">
+          {/* Hero Right Media Box - Overlapping founder badge matching Screenshot 2 precisely */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end relative mt-16 lg:mt-0">
+            <div className="relative max-w-[340px] sm:max-w-[360px] w-full pt-16 pb-8 px-6 sm:px-8 bg-[#0b0e1b]/90 backdrop-blur-md rounded-3xl border border-stone-800/80 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group transition-all duration-500">
               
-              {/* Main Background Image / Image placeholder */}
-              <img
-                src={heroGraffiti}
-                alt="Dream It Believe It Build It"
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105"
-              />
-              
-              {/* Overlay inside Card */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-95 pointer-events-none z-10" />
+              {/* Overlapping small circular floating profile avatar sticker */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none">
+                <div className="w-[100px] h-[100px] rounded-full p-[3px] bg-[#070913] border border-stone-800 shadow-xl overflow-hidden relative group-hover:scale-105 transition-transform duration-300">
+                  <img
+                    src={ownerProfileImg}
+                    alt="Schadrack Profile"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+              </div>
 
-              {/* Sophisticated Geometric Line Details */}
-              <div className="absolute inset-0 pointer-events-none z-20 border border-stone-800/40 m-4 rounded-[20px]" />
-
-              {/* Founder status card overlay - Elegant Modern Minimal Styling */}
-              <div className="absolute bottom-8 left-6 right-6 bg-[#0a0a0a]/90 backdrop-blur-md px-6 py-5 rounded-2xl border border-stone-800 shadow-xl z-20 hover:border-stone-700 transition-all duration-350">
-                <div className="flex items-center justify-center gap-2 mb-1">
-                  <span className="w-1.5 h-1.5 bg-stone-400 rounded-full" />
-                  <span className="text-stone-400 font-bold text-[9px] tracking-[0.25em] uppercase">
+              {/* Card Meta Content Info */}
+              <div className="text-center mt-2">
+                <div className="flex items-center justify-center gap-1.5 mb-2">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full animate-ping" />
+                  <span className="text-orange-400 font-bold text-[9px] tracking-[0.3em] uppercase block">
                     Founder & Lead Engineer
                   </span>
                 </div>
-                <div className="text-stone-100 font-serif italic text-base text-center mb-2">
+                
+                <h3 className="text-2xl font-serif italic text-white mb-2 font-medium tracking-wide">
                   Schadrack Muragijimana
-                </div>
-                <div className="h-px w-[40px] mx-auto bg-stone-800 my-2" />
-                <p className="text-[11px] text-stone-400 font-medium italic text-center leading-relaxed">
+                </h3>
+                
+                <div className="h-px w-[60px] mx-auto bg-stone-800 my-4" />
+                
+                <p className="text-xs text-stone-400 font-medium italic leading-relaxed max-w-[280px] mx-auto select-none">
                   "Empowering Rwanda's digital future through elegant code and innovative training."
                 </p>
               </div>

@@ -15,7 +15,7 @@ export default function Training() {
       projects: '5+ Real Projects',
       difficulty: 'Beginner',
       icon: 'Code',
-      color: '#eb7604',
+      color: '#10b981',
       topics: ['UI/UX', 'React', 'Git', 'API'],
       desc: 'Master the art of building modern, responsive web applications from the ground up.',
     },
@@ -26,7 +26,7 @@ export default function Training() {
       projects: 'SaaS Platform',
       difficulty: 'Intermediate',
       icon: 'Layers',
-      color: '#b6252a',
+      color: '#059669',
       topics: ['Auth', 'Database', 'Scaling', 'Cloud'],
       desc: 'Deep dive into enterprise-level backend architecture and scalable PHP systems.',
     },
@@ -37,7 +37,7 @@ export default function Training() {
       projects: 'Lab Simulation',
       difficulty: 'Beginner',
       icon: 'ShieldCheck',
-      color: '#e4973b',
+      color: '#34d399',
       topics: ['Networking', 'Hardware', 'Security', 'OS'],
       desc: 'The foundation of tech. Master networking, hardware, and professional system security.',
     },
@@ -88,18 +88,18 @@ _Sent from InfinityMura Training Section_`;
   };
 
   return (
-    <section id="training" className="py-24 bg-[#0a0a0a] relative overflow-hidden border-t border-stone-900">
+    <section id="training" className="py-24 bg-white relative overflow-hidden border-t border-stone-200/50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 select-none">
         
         {/* Title */}
         <div className="text-center mb-16">
-          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-500 block mb-2">
+          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-400 block mb-2">
             CHOOSE YOUR PATH
           </span>
-          <h2 className="text-4xl font-serif italic text-stone-100 tracking-tight">
+          <h2 className="text-4xl font-serif italic text-stone-850 tracking-tight">
             Professional Tech Training
           </h2>
-          <div className="h-px w-12 bg-stone-700 mx-auto mt-4" />
+          <div className="h-px w-12 bg-emerald-500/30 mx-auto mt-4" />
         </div>
 
         {/* Course Cards Grid */}
@@ -112,28 +112,28 @@ _Sent from InfinityMura Training Section_`;
             return (
               <div
                 key={course.id}
-                className="bg-stone-950/40 border border-stone-900 hover:border-stone-750 hover:bg-stone-900/10 rounded-[32px] p-8 flex flex-col justify-between transition-all duration-300 transform hover:scale-[1.01] cursor-pointer"
+                className="bg-white border border-stone-200/80 hover:border-emerald-500/20 hover:bg-[#f9f8f6]/50 rounded-[32px] p-8 flex flex-col justify-between transition-all duration-300 transform hover:scale-[1.01] cursor-pointer group shadow-sm"
               >
                 <div>
                   {/* Card head layout */}
                   <div className="flex items-center justify-between mb-6">
                     <div
-                      className="w-12 h-12 rounded-xl bg-stone-900 border border-stone-800 text-stone-300 flex items-center justify-center"
+                      className="w-12 h-12 rounded-xl bg-stone-50 border border-stone-200 text-stone-600 group-hover:text-emerald-600 group-hover:border-emerald-500/20 group-hover:bg-emerald-50 transition-colors duration-300 flex items-center justify-center"
                     >
                       <IconClass className="w-5 h-5" />
                     </div>
                     {/* Course tag specifications */}
                     <div className="flex flex-col items-end gap-1">
-                      <span className="text-stone-300 text-[9px] font-mono px-3 py-1 rounded-full uppercase tracking-wider bg-stone-900 border border-stone-850">
+                      <span className="text-stone-600 text-[9px] font-mono px-3 py-1 rounded-full uppercase tracking-wider bg-stone-50 border border-stone-200 group-hover:border-emerald-500/10 group-hover:text-emerald-650 transition-colors">
                         {course.duration}
                       </span>
-                      <span className="text-stone-500 font-bold text-[9px] uppercase tracking-wider">
+                      <span className="text-stone-400 font-bold text-[9px] uppercase tracking-wider">
                         {course.projects}
                       </span>
                     </div>
                   </div>
 
-                  <h3 className="font-serif italic text-stone-200 text-lg mb-3">
+                  <h3 className="font-serif italic text-stone-800 text-lg mb-3 group-hover:text-emerald-600 transition-colors">
                     {course.title}
                   </h3>
                   <p className="text-stone-500 text-xs sm:text-sm leading-relaxed mb-6">
@@ -142,14 +142,14 @@ _Sent from InfinityMura Training Section_`;
 
                   {/* Syllabus / Key skill tags */}
                   <div className="mb-8 p-1">
-                    <h6 className="text-[10px] uppercase tracking-[0.15em] font-black text-stone-500 mb-3 block">
+                    <h6 className="text-[10px] uppercase tracking-[0.15em] font-black text-stone-400 mb-3 block">
                       Core Syllabus
                     </h6>
                     <div className="flex flex-wrap gap-2">
                       {course.topics.map((topic, tIdx) => (
                         <span
                           key={tIdx}
-                          className="text-[10px] font-mono px-3 py-1.5 bg-stone-900 border border-stone-850 text-stone-400 rounded-md hover:bg-stone-800 transition-colors"
+                          className="text-[10px] font-mono px-3 py-1.5 bg-[#fcfbfa] border border-stone-200 text-stone-500 rounded-md hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-500/20 transition-all cursor-pointer"
                         >
                           {topic}
                         </span>
@@ -161,7 +161,7 @@ _Sent from InfinityMura Training Section_`;
                 {/* Card CTA */}
                 <button
                   onClick={() => handleEnrollClick(course)}
-                  className="w-full border border-stone-800 hover:border-stone-600 hover:bg-stone-900 text-stone-200 hover:text-white font-bold text-xs uppercase tracking-[0.16em] py-3.5 rounded-full text-center transition-all duration-200 cursor-pointer"
+                  className="w-full border border-emerald-500/30 hover:border-emerald-500 hover:bg-emerald-50/20 text-emerald-600 hover:text-emerald-700 font-bold text-xs uppercase tracking-[0.16em] py-3.5 rounded-full text-center transition-all duration-200 cursor-pointer text-stone-800 bg-emerald-50/10"
                 >
                   Enroll in Cohort
                 </button>
@@ -171,43 +171,43 @@ _Sent from InfinityMura Training Section_`;
         </div>
 
         {/* Student Testimonials Banner */}
-        <div className="border border-stone-900 bg-stone-950/40 rounded-[32px] p-8 sm:p-12 relative overflow-hidden">
+        <div className="border border-stone-200/80 bg-[#f9f8f6] rounded-[32px] p-8 sm:p-12 relative overflow-hidden shadow-sm">
           <div className="text-center mb-12">
-            <span className="text-stone-500 font-bold text-[10px] uppercase tracking-[0.25em] block mb-2">
+            <span className="text-stone-400 font-bold text-[10px] uppercase tracking-[0.25em] block mb-2">
               ALUMNI REVIEWS
             </span>
-            <h4 className="text-2xl font-serif italic text-stone-200">
+            <h4 className="text-2xl font-serif italic text-stone-850">
               What Students Say
             </h4>
-            <div className="h-px w-12 bg-stone-700 mx-auto mt-4" />
+            <div className="h-px w-12 bg-emerald-500/30 mx-auto mt-4" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {studentReviews.map((review, idx) => (
               <div
                 key={idx}
-                className="bg-[#0a0a0a]/45 p-6 rounded-2xl border border-stone-900/80 hover:border-stone-800 flex flex-col justify-between transition-all duration-300 cursor-pointer"
+                className="bg-white p-6 rounded-2xl border border-stone-200/60 hover:border-stone-300 hover:bg-[#fcfbfa]/50 flex flex-col justify-between transition-all duration-300 cursor-pointer shadow-sm"
               >
                 <div>
-                  <div className="flex items-center gap-1 text-stone-500 mb-4">
+                  <div className="flex items-center gap-1 text-emerald-500 mb-4 animate-pulse">
                     {[1, 2, 3, 4, 5].map((s) => (
-                      <Star key={s} className="w-3 h-3 fill-stone-500" />
+                      <Star key={s} className="w-3 h-3 fill-emerald-500 text-emerald-500" />
                     ))}
                   </div>
-                  <p className="text-stone-400 text-xs sm:text-sm leading-relaxed italic mb-8 relative">
-                    <Quote className="w-8 h-8 text-stone-900/40 absolute -top-4 -left-3 -z-0" />
+                  <p className="text-stone-600 text-xs sm:text-sm leading-relaxed italic mb-8 relative">
+                    <Quote className="w-8 h-8 text-stone-200/45 absolute -top-4 -left-3 -z-0" />
                     <span className="relative z-10">"{review.text}"</span>
                   </p>
                 </div>
 
-                <div className="flex items-center gap-3 pt-4 border-t border-stone-900/40">
-                  <div className="w-9 h-9 rounded-full bg-stone-900 border border-stone-800 text-stone-300 font-serif italic flex items-center justify-center text-sm">
+                <div className="flex items-center gap-3 pt-4 border-t border-stone-100">
+                  <div className="w-9 h-9 rounded-full bg-stone-50 border border-stone-200 text-stone-600 font-serif italic flex items-center justify-center text-sm">
                     {review.name[0]}
                   </div>
                   <div>
-                    <h6 className="font-serif italic text-stone-200 text-sm leading-tight">{review.name}</h6>
-                    <p className="text-stone-500 text-[9px] font-mono uppercase mt-0.5">
-                      {review.role} • <span className="text-stone-400">{review.company}</span>
+                    <h6 className="font-serif italic text-stone-800 text-sm leading-tight">{review.name}</h6>
+                    <p className="text-stone-400 text-[9px] font-mono uppercase mt-0.5">
+                      {review.role} • <span className="text-stone-500">{review.company}</span>
                     </p>
                   </div>
                 </div>
@@ -220,31 +220,31 @@ _Sent from InfinityMura Training Section_`;
 
       {/* ENROLLMENT DIALOG MODAL */}
       {showEnrollModal && selectedCourse && (
-        <div className="fixed inset-0 bg-[#060606]/90 backdrop-blur-sm flex items-center justify-center z-50 p-4 select-none">
-          <div className="bg-stone-950 rounded-3xl border border-stone-900 max-w-md w-full overflow-hidden animate-[fadeIn_0.3s_ease-out]">
+        <div className="fixed inset-0 bg-stone-900/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 select-none">
+          <div className="bg-white rounded-3xl border border-stone-200/80 max-w-md w-full overflow-hidden shadow-2xl animate-[fadeIn_0.3s_ease-out]">
             <div className="p-6 sm:p-8 relative">
               <button
                 onClick={() => setShowEnrollModal(false)}
-                className="absolute top-4 right-4 p-1.5 rounded-full text-stone-500 hover:text-stone-300 hover:bg-stone-900 transition-colors cursor-pointer"
+                className="absolute top-4 right-4 p-1.5 rounded-full text-stone-400 hover:text-stone-600 hover:bg-stone-100 transition-colors cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </button>
 
               <div className="text-center mb-6 mt-2">
                 <div
-                  className="w-11 h-11 rounded-full bg-stone-900 border border-stone-850 text-stone-400 flex items-center justify-center mx-auto mb-3"
+                  className="w-11 h-11 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-3"
                 >
                   <Award className="w-5 h-5" />
                 </div>
-                <h4 className="text-base font-serif italic text-stone-100 mb-1">Enrollment Desk</h4>
-                <p className="text-stone-500 text-xs leading-relaxed max-w-xs mx-auto">
+                <h4 className="text-base font-serif italic text-stone-800 mb-1">Enrollment Desk</h4>
+                <p className="text-stone-400 text-xs leading-relaxed max-w-xs mx-auto">
                   Submit this inquiry to join the next cohort of <b>{selectedCourse.title}</b>.
                 </p>
               </div>
 
               <form onSubmit={submitEnrollment} className="space-y-4">
                 <div>
-                  <label className="block text-[9px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-2">
+                  <label className="block text-[9px] uppercase tracking-[0.2em] font-bold text-stone-400 mb-2">
                     Your Full Name
                   </label>
                   <input
@@ -253,12 +253,12 @@ _Sent from InfinityMura Training Section_`;
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Full Name"
-                    className="w-full border border-stone-900 p-3.5 rounded-xl bg-stone-900/50 outline-none focus:border-stone-700 text-sm transition-all text-stone-200"
+                    className="w-full border border-stone-200 p-3.5 rounded-xl bg-white outline-none focus:border-emerald-500 text-sm transition-all text-stone-800"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[9px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-2">
+                  <label className="block text-[9px] uppercase tracking-[0.2em] font-bold text-stone-400 mb-2">
                     Phone Number (WhatsApp)
                   </label>
                   <input
@@ -267,13 +267,13 @@ _Sent from InfinityMura Training Section_`;
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="E.g., +250 788 000 000"
-                    className="w-full border border-stone-900 p-3.5 rounded-xl bg-stone-900/50 outline-none focus:border-stone-700 text-sm transition-all text-stone-200"
+                    className="w-full border border-stone-200 p-3.5 rounded-xl bg-white outline-none focus:border-emerald-500 text-sm transition-all text-stone-800"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-stone-100 hover:bg-white text-[#0a0a0a] font-bold text-xs uppercase tracking-[0.2em] p-3.5 rounded-xl transition-all mt-6 cursor-pointer"
+                  className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-[0.2em] p-3.5 rounded-xl transition-all mt-6 cursor-pointer shadow-md shadow-emerald-500/10"
                 >
                   Request Enrollment
                 </button>

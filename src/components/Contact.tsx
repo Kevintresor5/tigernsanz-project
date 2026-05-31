@@ -1,11 +1,10 @@
 import { useState, FormEvent } from 'react';
-import { Mail, Phone, MapPin, Send, Check } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Check, Zap, Calendar, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
   });
   const [isSent, setIsSent] = useState(false);
@@ -20,9 +19,7 @@ export default function Contact() {
       setIsSent(true);
 
       // Trigger standard mailto for backup
-      const mailtoUrl = `mailto:muragijimanaschadrack183@gmail.com?subject=${encodeURIComponent(
-        formData.subject || 'Portfolio Inquiry'
-      )}&body=${encodeURIComponent(
+      const mailtoUrl = `mailto:muragijimanaschadrack183@gmail.com?subject=Portfolio Inquiry&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
       )}`;
       
@@ -32,7 +29,7 @@ export default function Contact() {
       // Reset form on success feedback
       setTimeout(() => {
         setIsSent(false);
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormData({ name: '', email: '', message: '' });
       }, 3000);
     }, 1200);
   };
@@ -43,169 +40,190 @@ export default function Contact() {
     window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
+  const handleBookMeeting = () => {
+    const recipient = '250791767725';
+    const text = 'Hi Schadrack, I would like to book a meeting with you to discuss a custom software collaboration project.';
+    window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(text)}`, '_blank');
+  };
+
   return (
-    <section id="contact" className="py-24 bg-[#0a0a0a] border-t border-stone-900 relative select-none">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <section id="contact" className="py-24 bg-[#fcfbfa] border-t border-stone-200/50 relative select-none">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
         
-        {/* Header Title */}
+        {/* Custom Header Title matching Screenshot 4 */}
         <div className="text-center mb-16">
-          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-500 block mb-2">
-            GET IN TOUCH
-          </span>
-          <h2 className="text-4xl font-serif italic text-stone-100 tracking-tight">
-            Contact Us
+          <h2 className="text-5xl font-black text-stone-900 tracking-tight leading-none mb-3">
+            Get In <span className="text-[#ff5500]">Touch</span>
           </h2>
-          <div className="h-px w-12 bg-stone-700 mx-auto mt-4" />
+          <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-400 block">
+            LET'S COLLABORATE ON YOUR NEXT BIG IDEA
+          </span>
+          <div className="h-[2px] w-12 bg-orange-500/30 mx-auto mt-4 animate-pulse" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* LEFT COLUMN: CONTACT DETAILS CARDS */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="bg-stone-950/40 rounded-[32px] p-8 border border-stone-900 relative overflow-hidden text-stone-200">
+          {/* LEFT COLUMN: DARK CONTACT INFO BLOCK FROM SCREENSHOT 4 */}
+          <div className="lg:col-span-5 flex flex-col">
+            <div className="bg-[#0b0e1b] rounded-[28px] p-8 border border-stone-850 shadow-xl flex flex-col justify-between h-full text-stone-300">
               
-              <h4 className="text-xl font-serif italic text-stone-200 mb-2">Direct Collaboration</h4>
-              <p className="text-stone-550 text-xs sm:text-sm leading-relaxed mb-8">
-                Ready to kick off your project? Drop us a lines or start a direct WhatsApp text to begin instantly.
-              </p>
+              <div>
+                <h4 className="text-xs uppercase tracking-[0.25em] font-bold text-stone-400 mb-6 pb-2 border-b border-stone-800">
+                  Contact Info
+                </h4>
 
-              {/* Action buttons */}
-              <button
-                onClick={handleQuickWhatsApp}
-                className="w-full bg-stone-100 hover:bg-white text-[#0a0a0a] font-bold text-xs uppercase tracking-[0.2em] p-4 rounded-full transition-all cursor-pointer"
-              >
-                Chat on WhatsApp
-              </button>
-            </div>
+                <div className="space-y-6 mb-8">
+                  {/* Phone Item */}
+                  <div className="group cursor-pointer" onClick={handleQuickWhatsApp}>
+                    <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-[#ff5500] block mb-1">
+                      Direct Line
+                    </span>
+                    <p className="text-white text-base font-semibold tracking-wide transition-all duration-200 group-hover:text-[#ff5500]">
+                      +250 791 767 725
+                    </p>
+                  </div>
 
-            {/* Address cards */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 p-5 bg-[#0d0d0d]/40 border border-stone-900 rounded-[20px]">
-                <div className="w-10 h-10 rounded-xl bg-stone-900 border border-stone-850 text-stone-450 flex items-center justify-center">
-                  <Mail className="w-4 h-4" />
-                </div>
-                <div>
-                  <h6 className="text-[9px] uppercase font-bold text-stone-500 tracking-wider mb-0.5">Email Us</h6>
-                  <p className="text-stone-300 text-sm font-mono leading-tight">
-                    muragijimanaschadrack183@gmail.com
-                  </p>
+                  {/* Mail Item */}
+                  <div className="group cursor-pointer">
+                    <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-[#ff5500] block mb-1">
+                      Email
+                    </span>
+                    <p className="text-stone-300 text-sm font-mono tracking-wide transition-all duration-200 group-hover:text-white select-all break-all text-ellipsis overflow-hidden">
+                      muragijimanaschadrack183@gmail.com
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-5 bg-[#0d0d0d]/40 border border-stone-900 rounded-[20px]">
-                <div className="w-10 h-10 rounded-xl bg-stone-900 border border-stone-850 text-stone-450 flex items-center justify-center">
-                  <Phone className="w-4 h-4" />
+              {/* Glowing Interactive Current Status block from Screenshot 4 */}
+              <div className="mt-auto bg-[#13172c] p-6 rounded-2xl border border-stone-800 relative overflow-hidden shadow-inner">
+                <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-[#ff5500]/5 rounded-full blur-xl pointer-events-none" />
+                
+                <div className="flex items-start gap-3.5 relative z-10">
+                  <div className="w-9 h-9 rounded-xl bg-orange-950/40 border border-orange-500/25 flex items-center justify-center text-[#ff5500] shrink-0">
+                    <Zap className="w-5 h-5 fill-current" />
+                  </div>
+                  <div className="space-y-1.5 flex-grow">
+                    <span className="text-[9px] font-mono text-stone-400 tracking-wider block font-bold uppercase">
+                      Current Status
+                    </span>
+                    
+                    <h5 className="font-bold text-white text-sm">
+                      Available for projects
+                    </h5>
+                    
+                    {/* Glowing active green dot badge */}
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-emerald-950/40 border border-emerald-500/20 rounded-full">
+                      <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping" />
+                      <span className="text-emerald-400 font-bold text-[8px] tracking-wide uppercase">
+                        On Duty & Active
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h6 className="text-[9px] uppercase font-bold text-stone-500 tracking-wider mb-0.5">Call Us</h6>
-                  <p className="text-stone-300 text-sm font-mono leading-tight">
-                    +250 791 767 225
-                  </p>
-                </div>
+
+                {/* Book Meeting inside status block */}
+                <button
+                  type="button"
+                  onClick={handleBookMeeting}
+                  className="w-full mt-4 bg-transparent hover:bg-stone-900 border border-stone-700 text-stone-200 hover:text-white font-bold text-[10px] uppercase tracking-[0.18em] py-3 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm active:scale-95"
+                >
+                  <Calendar className="w-3.5 h-3.5 text-orange-400" />
+                  Book Meeting
+                </button>
               </div>
 
-              <div className="flex items-center gap-4 p-5 bg-[#0d0d0d]/40 border border-stone-900 rounded-[20px]">
-                <div className="w-10 h-10 rounded-xl bg-stone-900 border border-stone-850 text-stone-450 flex items-center justify-center">
-                  <MapPin className="w-4 h-4" />
-                </div>
-                <div>
-                  <h6 className="text-[9px] uppercase font-bold text-stone-500 tracking-wider mb-0.5">Location</h6>
-                  <p className="text-stone-300 text-sm font-mono leading-tight">
-                    Musanze — Kigali, Rwanda
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
 
-          {/* RIGHT COLUMN: CONTACT INQUIRIES SHEET */}
-          <div className="lg:col-span-7">
-            <div className="bg-stone-950/45 border border-stone-900 rounded-[32px] p-6 sm:p-10">
-              <h4 className="font-serif italic text-stone-200 text-lg mb-6">
-                Send an Inquiry Message
-              </h4>
+          {/* RIGHT COLUMN: LIGHT INQUIRIES SHEET FROM SCREENSHOT 4 */}
+          <div className="lg:col-span-7 flex flex-col">
+            <div className="bg-white border border-stone-200/80 rounded-[28px] p-6 sm:p-8 flex flex-col justify-between h-full shadow-sm">
+              <form onSubmit={handleSubmit} className="space-y-5 flex flex-col justify-between h-full">
+                
+                <div className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-[9px] uppercase tracking-[0.22em] font-bold text-stone-400 mb-2">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        placeholder="Your Name"
+                        className="w-full p-4 border border-stone-200 bg-stone-50/50 text-stone-850 placeholder-stone-300 outline-none rounded-xl focus:border-stone-450 focus:bg-white text-sm font-semibold transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[9px] uppercase tracking-[0.22em] font-bold text-stone-400 mb-2">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        placeholder="name@email.com"
+                        className="w-full p-4 border border-stone-200 bg-stone-50/50 text-stone-850 placeholder-stone-300 outline-none rounded-xl focus:border-stone-450 focus:bg-white text-sm font-semibold transition-all"
+                      />
+                    </div>
+                  </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[9px] uppercase tracking-[0.22em] font-bold text-stone-500 mb-2">
-                      Full Name
+                    <label className="block text-[9px] uppercase tracking-[0.22em] font-bold text-stone-400 mb-2">
+                      Tell me about your project...
                     </label>
-                    <input
-                      type="text"
+                    <textarea
                       required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Your Name"
-                      className="w-full p-3.5 border border-stone-900 bg-stone-900/40 text-stone-100 placeholder-stone-705 outline-none rounded-xl focus:border-stone-700 text-sm font-semibold transition-all"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      rows={6}
+                      placeholder="Hi Schadrack, I have a project idea..."
+                      className="w-full p-4 border border-stone-200 bg-stone-50/50 text-stone-850 placeholder-stone-300 outline-none rounded-xl focus:border-stone-450 focus:bg-white text-sm font-semibold transition-all resize-none"
                     />
                   </div>
-                  <div>
-                    <label className="block text-[9px] uppercase tracking-[0.22em] font-bold text-stone-500 mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="name@email.com"
-                      className="w-full p-3.5 border border-stone-900 bg-stone-900/40 text-stone-100 placeholder-stone-705 outline-none rounded-xl focus:border-stone-700 text-sm font-semibold transition-all"
-                    />
-                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-[9px] uppercase tracking-[0.22em] font-bold text-stone-500 mb-2">
-                    Subject Topic
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    placeholder="Subject Title"
-                    className="w-full p-3.5 border border-stone-900 bg-stone-900/40 text-stone-100 placeholder-stone-705 outline-none rounded-xl focus:border-stone-700 text-sm font-semibold transition-all"
-                  />
+                {/* Bottom Dual Button Actions corresponding to Screenshot 4 */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                  {/* Dark Email Button */}
+                  <button
+                    type="submit"
+                    disabled={loading || isSent}
+                    className={`w-full p-4 rounded-xl font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer text-[10px] uppercase tracking-[0.18em] ${
+                      isSent
+                        ? 'bg-emerald-50 text-emerald-600 border border-emerald-200'
+                        : 'bg-[#0b0e1b] hover:bg-stone-900 text-white shadow-sm'
+                    }`}
+                  >
+                    {loading ? (
+                      'Dispatching...'
+                    ) : isSent ? (
+                      <>
+                        <Check className="w-4 h-4 text-emerald-600" />
+                        Dispatched
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-3.5 h-3.5" />
+                        Send Official Email
+                      </>
+                    )}
+                  </button>
+
+                  {/* Green Outline WhatsApp Button */}
+                  <button
+                    type="button"
+                    onClick={handleQuickWhatsApp}
+                    className="w-full p-4 border border-emerald-500 text-emerald-600 hover:bg-emerald-50 bg-white rounded-xl font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer text-[10px] uppercase tracking-[0.18em] active:scale-95"
+                  >
+                    <MessageCircle className="w-4 h-4 text-emerald-500 fill-emerald-50/10" />
+                    Chat on WhatsApp
+                  </button>
                 </div>
 
-                <div>
-                  <label className="block text-[9px] uppercase tracking-[0.22em] font-bold text-stone-500 mb-2">
-                    Detailed Message
-                  </label>
-                  <textarea
-                    required
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    rows={4}
-                    placeholder="Describe your request..."
-                    className="w-full p-3.5 border border-stone-900 bg-stone-900/40 text-stone-100 placeholder-stone-705 outline-none rounded-xl focus:border-stone-700 text-sm font-semibold transition-all resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={loading || isSent}
-                  className={`w-full p-4 rounded-full font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer text-xs uppercase tracking-[0.2em] ${
-                    isSent
-                      ? 'bg-stone-800 text-stone-200'
-                      : 'bg-stone-100 hover:bg-white text-[#0a0a0a]'
-                  }`}
-                >
-                  {loading ? (
-                    'Sending...'
-                  ) : isSent ? (
-                    <>
-                      <Check className="w-4 h-4 text-stone-200" />
-                      Inquiry Dispatched!
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-3.5 h-3.5" />
-                      Dispatch Message
-                    </>
-                  )}
-                </button>
               </form>
             </div>
           </div>
