@@ -73,14 +73,14 @@ export default function Training() {
     e.preventDefault();
     if (!selectedCourse) return;
 
-    const recipient = '250791767725';
+    const recipient = '250795547233';
     const message = `*NEW STUDENT ENROLLMENT*
 ━━━━━━━━━━━━━━━━━━
 📚 *Course:* ${selectedCourse.title}
 👤 *Name:* ${formData.name}
 📱 *Phone:* ${formData.phone}
 ━━━━━━━━━━━━━━━━━━
-_Sent from InfinityMura Training Section_`;
+_Sent from reneproject Training Section_`;
 
     window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(message)}`, '_blank');
     setShowEnrollModal(false);

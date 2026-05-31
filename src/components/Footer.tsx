@@ -8,7 +8,7 @@ export default function Footer({ onScrollToTop }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, url: 'https://github.com/tigernsanz', color: '#fff' },
+    { icon: Github, url: 'https://github.com/remmy600', color: '#fff' },
     { icon: Linkedin, url: 'https://linkedin.com/in/remy-nsanzimana', color: '#0077b5' },
     { icon: Twitter, url: 'https://x.com/remynsanzimana', color: '#1da1f2' },
   ];
@@ -25,7 +25,7 @@ export default function Footer({ onScrollToTop }: FooterProps) {
                 I
               </div>
               <span className="text-xl font-mono text-stone-100 tracking-tight font-black uppercase">
-                Infinity<span className="text-[#ff5500]">_Mura</span>
+                rene<span className="text-[#ff5500]">project</span>
               </span>
             </div>
             <p className="text-stone-500 text-xs sm:text-sm max-w-lg leading-relaxed mx-auto md:mx-0">
@@ -55,7 +55,7 @@ export default function Footer({ onScrollToTop }: FooterProps) {
 
         {/* Attribution credit footer */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] uppercase tracking-[0.15em] font-bold text-stone-500">
-          <p>© {currentYear} InfinityMura. All rights reserved.</p>
+          <p>© {currentYear} reneproject. All rights reserved.</p>
 
           <p className="flex items-center gap-1.5 hover:text-[#ff5500] transition-colors">
             Made with <Heart className="w-3.5 h-3.5 text-[#ff5500] fill-orange-500/30 animate-pulse" /> in Musanze

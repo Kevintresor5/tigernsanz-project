@@ -57,7 +57,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
                 <div className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse" />
               </div>
               <span className="text-sm font-black tracking-widest text-white transition-colors">
-                Infinity<span className="text-[#ff5500]">_Mura</span>
+                rene<span className="text-[#ff5500]">project</span>
               </span>
             </div>
 
@@ -182,7 +182,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
                 <ShoppingBag className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-[9px] font-mono text-orange-400 tracking-widest uppercase block">INFINITYMURA ECO-SHOP</span>
+                <span className="text-[9px] font-mono text-orange-400 tracking-widest uppercase block">RENEPROJECT ECO-SHOP</span>
                 <h3 className="text-xl font-serif italic text-white">Academy & Software Shop</h3>
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
                 <button 
                   onClick={() => {
                     const msg = encodeURIComponent("Hi Remy, I'm interested in purchasing enrollment for the Advanced Fullstack Engineering Course (3-Months). Can we talk?");
-                    window.open(`https://wa.me/250791767725?text=${msg}`, '_blank');
+                    window.open(`https://wa.me/250795547233?text=${msg}`, '_blank');
                   }}
                   className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-2 rounded-lg shrink-0"
                 >
@@ -218,7 +218,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
                 <button 
                   onClick={() => {
                     const msg = encodeURIComponent("Hi Remy, I'm interested in a custom School ERP License customisation for our institution. Can I get a quote?");
-                    window.open(`https://wa.me/250791767725?text=${msg}`, '_blank');
+                    window.open(`https://wa.me/250795547233?text=${msg}`, '_blank');
                   }}
                   className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-2 rounded-lg shrink-0"
                 >
@@ -235,7 +235,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
                 <button 
                   onClick={() => {
                     const msg = encodeURIComponent("Hi Remy, I'm looking to buy the Tailored E-Commerce Suite for my online retail store. Let's talk details!");
-                    window.open(`https://wa.me/250791767725?text=${msg}`, '_blank');
+                    window.open(`https://wa.me/250795547233?text=${msg}`, '_blank');
                   }}
                   className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-2 rounded-lg shrink-0"
                 >

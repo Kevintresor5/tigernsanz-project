@@ -2,7 +2,7 @@ import { useState, FormEvent } from 'react';
 import { Users, GraduationCap, Cpu, Calendar, Cloud, Wrench, Code2, Monitor, FileSpreadsheet, Send, X } from 'lucide-react';
 import { SkillItem, Certification } from '../types';
 
-const ownerProfileImg = new URL('../assets/images/owner_profile_1780260030406.png', import.meta.url).href;
+const ownerProfileImg = new URL('../assets/images/owner_profile_new_1780262207364.png', import.meta.url).href;
 
 export default function About() {
   const [activeTab, setActiveTab] = useState<'bio' | 'certs'>('bio');
@@ -69,7 +69,7 @@ export default function About() {
       setIsApproved(true);
       setIsSubmitting(false);
 
-      const recipient = '250791767725';
+      const recipient = '250795547233';
       const text = `🚀 *CV ACCESS REQUEST*
 ━━━━━━━━━━━━━━━━━━
 👤 *From:* ${formData.requesterName}

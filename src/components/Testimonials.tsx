@@ -42,8 +42,8 @@ export default function Testimonials() {
   ];
 
   const handleWhatsappPartnership = () => {
-    const recipient = '250791767725';
-    const text = `Hi Remy, I read your testimonials and would like to explore a potential partnership with InfinityMura.`;
+    const recipient = '250795547233';
+    const text = `Hi Remy, I read your testimonials and would like to explore a potential partnership with reneproject.`;
     window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(text)}`, '_blank');
   };
 

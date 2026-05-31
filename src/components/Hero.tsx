@@ -1,6 +1,6 @@
 import { MessageCircle, ArrowRight, Star } from 'lucide-react';
 
-const ownerProfileImg = new URL('../assets/images/owner_profile_1780260030406.png', import.meta.url).href;
+const ownerProfileImg = new URL('../assets/images/owner_profile_new_1780262207364.png', import.meta.url).href;
 
 interface HeroProps {
   onExploreCourses: () => void;
@@ -43,7 +43,7 @@ export default function Hero({ onExploreCourses, onGetStarted }: HeroProps) {
 
             {/* Premium Serif Display Title */}
             <h1 className="text-5xl sm:text-7xl lg:text-[84px] leading-tight font-sans font-black tracking-tight text-white mb-6">
-              Infinity<span className="text-[#ff5500]">_Mura</span>
+              rene<span className="text-[#ff5500]">project</span>
             </h1>
 
             {/* Refined Custom Subtitle Border Layout */}

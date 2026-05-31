@@ -135,7 +135,7 @@ export default function Projects() {
       description: 'Advanced real-time workstation & education gateway built for EAV Kivumu TSS L4SWD class.',
       tech: ['React', 'TypeScript', 'Tailwind', 'Git'],
       image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop',
-      details: 'Co-developed and designed by student Remy Nsanzimana representing Level 4 Software Development (L4SWD) at EAV Kivumu Technical Secondary School (TSS), mentored under the supervision of InfinityMura.',
+      details: 'Co-developed and designed by student Remy Nsanzimana representing Level 4 Software Development (L4SWD) at EAV Kivumu Technical Secondary School (TSS), mentored under the supervision of reneproject.',
       accent: '#ff5500',
     },
   ];
@@ -155,7 +155,7 @@ export default function Projects() {
   });
 
   const triggerProjectWhatsApp = (project: Project) => {
-    const recipient = '250791767725';
+    const recipient = '250795547233';
     const msg = `Hi Remy, I'm reviewing your portfolio and would like to inquire about your project: *${project.title}* (${project.category}).`;
     window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(msg)}`, '_blank');
   };

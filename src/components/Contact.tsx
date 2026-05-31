@@ -19,7 +19,7 @@ export default function Contact() {
       setIsSent(true);
 
       // Trigger standard mailto for backup
-      const mailtoUrl = `mailto:remynsanzimana@gmail.com?subject=Portfolio Inquiry&body=${encodeURIComponent(
+      const mailtoUrl = `mailto:remmynsanzimana@gmail.com?subject=Portfolio Inquiry&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
       )}`;
       
@@ -35,13 +35,13 @@ export default function Contact() {
   };
 
   const handleQuickWhatsApp = () => {
-    const recipient = '250791767725';
+    const recipient = '250795547233';
     const text = 'Hi Remy, I just saw your portfolio and would like to hire your software services.';
     window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   const handleBookMeeting = () => {
-    const recipient = '250791767725';
+    const recipient = '250795547233';
     const text = 'Hi Remy, I would like to book a meeting with you to discuss a custom software collaboration project.';
     window.open(`https://wa.me/${recipient}?text=${encodeURIComponent(text)}`, '_blank');
   };
@@ -79,7 +79,7 @@ export default function Contact() {
                       Direct Line
                     </span>
                     <p className="text-white text-base font-semibold tracking-wide transition-all duration-200 group-hover:text-[#ff5500]">
-                      +250 791 767 725
+                      +250 795 547 233
                     </p>
                   </div>
 
@@ -89,7 +89,7 @@ export default function Contact() {
                       Email
                     </span>
                     <p className="text-stone-300 text-sm font-mono tracking-wide transition-all duration-200 group-hover:text-white select-all break-all text-ellipsis overflow-hidden">
-                      muragijimanaschadrack183@gmail.com
+                      remmynsanzimana@gmail.com
                     </p>
                   </div>
                 </div>
