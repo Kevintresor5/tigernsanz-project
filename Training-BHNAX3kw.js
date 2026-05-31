@@ -1,0 +1,47 @@
+import{r as d,j as e}from"./vendor-cbZc9Uze.js";import{B as j,a as c,M as f,F as r}from"./vendor-ui-Bf1prFm1.js";const y=()=>{const[i,x]=d.useState(0),[h,n]=d.useState(!1),[g,m]=d.useState(!1),[l,p]=d.useState({name:"",phone:""}),s={orange:"#eb7604",crimson:"#b6252a",goldenrod:"#e4973b",dark:"#0f172a",slate:"#334155"},t=[{id:0,title:"Web Development",duration:"8 Weeks",projects:"5+ Real Projects",difficulty:"Beginner",icon:"bi-code-square",color:s.orange,topics:["UI/UX","React","Git","API"],desc:"Master the art of building modern, responsive web applications from the ground up."},{id:1,title:"Advanced Laravel",duration:"6 Weeks",projects:"SaaS Platform",difficulty:"Intermediate",icon:"bi-layers-half",color:s.crimson,topics:["Auth","Database","Scaling","Cloud"],desc:"Deep dive into enterprise-level backend architecture and scalable PHP systems."},{id:2,title:"IT Support",duration:"4 Weeks",projects:"Lab Simulation",difficulty:"Beginner",icon:"bi-shield-lock",color:s.goldenrod,topics:["Networking","Hardware","Security","OS"],desc:"The foundation of tech. Master networking, hardware, and professional system security."}],u=[{name:"Jean de Dieu",role:"Frontend Developer",text:"I started with zero coding knowledge. Within 8 weeks, I built my first portfolio and landed an internship!",company:"TechRwanda"},{name:"Aline Marie",role:"IT Specialist",text:"The hardware labs were amazing. I gained the confidence to manage network security for a whole office.",company:"Global Connect"},{name:"Samuel K.",role:"Backend Engineer",text:"The Laravel course is pure gold. It bridges the gap between basic coding and professional software engineering.",company:"Fintech Solutions"}],b=a=>{a.preventDefault();const o=`*NEW STUDENT ENROLLMENT*%0A*Course:* ${t[i].title}%0A*Name:* ${l.name}%0A*Phone:* ${l.phone}`;window.open(`https://wa.me/250791767725?text=${o}`,"_blank"),n(!1)};return e.jsxs("section",{id:"training",className:"training-wrapper",children:[e.jsxs("div",{className:"container py-5 px-4",children:[e.jsxs("header",{className:"text-center mb-5",children:[e.jsx(j,{pill:!0,className:"modern-badge mb-3",children:"2026 ENROLLMENT NOW OPEN"}),e.jsxs("h1",{className:"hero-title",children:["Elevate Your ",e.jsx("span",{className:"text-gradient",children:"Career"})]}),e.jsx("p",{className:"hero-sub",children:"Rwanda's leading practical tech hub. Move from theory to professional practice."})]}),e.jsx("div",{className:"row g-4 mb-5",children:t.map(a=>e.jsx("div",{className:"col-12 col-md-6 col-lg-4",children:e.jsxs("div",{className:"course-hub-card",onClick:()=>{x(a.id),n(!0)},children:[e.jsxs("div",{className:"card-top d-flex align-items-center",children:[e.jsx("div",{className:"icon-box",style:{background:a.color},children:e.jsx("i",{className:`bi ${a.icon}`})}),e.jsxs("div",{className:"ms-3",children:[e.jsx("h5",{className:"fw-900 m-0",children:a.title}),e.jsxs("small",{className:"text-muted fw-bold",children:[a.duration," • ",a.difficulty]})]})]}),e.jsx("p",{className:"card-desc",children:a.desc}),e.jsxs("div",{className:"card-footer-modern d-flex justify-content-between align-items-center",children:[e.jsx("div",{className:"topics-pill-box",children:a.topics.slice(0,3).map(o=>e.jsxs("span",{className:"mini-pill",children:["#",o]},o))}),e.jsx("i",{className:"bi bi-arrow-right-short fs-3",style:{color:a.color}})]})]})},a.id))}),e.jsx("div",{className:"text-center",children:g?e.jsxs("div",{className:"stories-reveal fade-in-up",children:[e.jsxs("div",{className:"d-flex justify-content-between align-items-center mb-4",children:[e.jsx("h3",{className:"fw-900 m-0",children:"Student Success"}),e.jsx(c,{variant:"link",className:"text-decoration-none fw-bold",onClick:()=>m(!1),children:"Close"})]}),e.jsx("div",{className:"row g-3",children:u.map((a,o)=>e.jsx("div",{className:"col-12 col-md-4",children:e.jsxs("div",{className:"modern-story-card",children:[e.jsxs("p",{className:"story-quote",children:['"',a.text,'"']}),e.jsxs("div",{className:"d-flex align-items-center mt-3",children:[e.jsx("div",{className:"avatar",children:a.name.charAt(0)}),e.jsxs("div",{className:"text-start ms-2",children:[e.jsx("div",{className:"fw-bold small",children:a.name}),e.jsx("div",{className:"company-text",children:a.company})]})]})]})},o))})]}):e.jsxs(c,{className:"btn-modern-dark w-100",onClick:()=>m(!0),children:[e.jsx("i",{className:"bi bi-lightning-charge-fill me-2"}),"See Graduate Impact"]})})]}),e.jsx(f,{show:h,onHide:()=>n(!1),centered:!0,fullscreen:"sm-down",className:"modern-modal",children:e.jsx(f.Body,{className:"p-0",children:e.jsxs("div",{className:"modal-grid",children:[e.jsxs("div",{className:"modal-sidebar",style:{backgroundColor:t[i].color},children:[e.jsx("i",{className:`bi ${t[i].icon} display-1 mb-3`}),e.jsx("h4",{className:"fw-900",children:"Apply Today"}),e.jsx("p",{className:"small opacity-75",children:t[i].title})]}),e.jsxs("div",{className:"modal-form-content",children:[e.jsx("button",{type:"button",className:"btn-close modal-custom-close",onClick:()=>n(!1),"aria-label":"Close"}),e.jsxs(r,{onSubmit:b,children:[e.jsx("h4",{className:"fw-900 mb-4",children:"Enrollment Form"}),e.jsxs(r.Group,{className:"mb-4",children:[e.jsx(r.Label,{className:"small-label",children:"FULL NAME"}),e.jsx(r.Control,{required:!0,className:"pro-input",placeholder:"Enter your name",onChange:a=>p({...l,name:a.target.value})})]}),e.jsxs(r.Group,{className:"mb-4",children:[e.jsx(r.Label,{className:"small-label",children:"WHATSAPP NUMBER"}),e.jsx(r.Control,{required:!0,className:"pro-input",type:"tel",placeholder:"078...",onChange:a=>p({...l,phone:a.target.value})})]}),e.jsxs(c,{type:"submit",className:"w-100 pro-btn",style:{backgroundColor:t[i].color},children:["Send via WhatsApp ",e.jsx("i",{className:"bi bi-whatsapp ms-2"})]})]})]})]})})}),e.jsx("style",{children:`
+        /* Anchor scroll fix */
+        .training-wrapper { 
+          background: #fff; 
+          font-family: 'Plus Jakarta Sans', sans-serif; 
+          scroll-margin-top: 80px; 
+        }
+        
+        .fw-900 { font-weight: 900; }
+        .hero-title { font-size: 3rem; font-weight: 900; letter-spacing: -2px; }
+        .text-gradient { background: linear-gradient(90deg, ${s.orange}, ${s.crimson}); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-sub { color: ${s.slate}; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .modern-badge { background: #f1f5f9; color: ${s.slate}; font-weight: 800; padding: 10px 20px; font-size: 0.75rem; letter-spacing: 1px; }
+
+        .course-hub-card { 
+          background: #fff; border: 1.5px solid #f1f5f9; border-radius: 28px; padding: 30px; 
+          transition: all 0.3s ease; cursor: pointer; height: 100%; display: flex; flex-direction: column;
+        }
+        .course-hub-card:hover { transform: translateY(-8px); border-color: ${s.orange}; box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        .icon-box { width: 56px; height: 56px; border-radius: 18px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; flex-shrink: 0; }
+        .card-desc { color: ${s.slate}; font-size: 0.95rem; margin-top: 20px; flex-grow: 1; line-height: 1.6; }
+        .card-footer-modern { margin-top: 20px; border-top: 1px solid #f1f5f9; padding-top: 15px; }
+        .mini-pill { background: #f8fafc; padding: 4px 10px; border-radius: 8px; font-size: 0.7rem; font-weight: 800; color: ${s.slate}; margin-right: 5px; }
+
+        .btn-modern-dark { background: ${s.dark}; border: none; padding: 20px; border-radius: 20px; font-weight: 800; font-size: 1.1rem; color: #fff; }
+        .btn-modern-dark:hover { background: #000; color: #fff; }
+        
+        .modern-story-card { background: #f8fafc; padding: 25px; border-radius: 24px; text-align: left; height: 100%; }
+        .avatar { width: 40px; height: 40px; background: ${s.dark}; color: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 900; flex-shrink: 0; }
+        .company-text { font-size: 0.7rem; color: #10b981; font-weight: 800; text-transform: uppercase; }
+
+        .modal-grid { display: grid; grid-template-columns: 1fr 1.5fr; min-height: 450px; }
+        .modal-sidebar { padding: 40px; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .modal-form-content { padding: 40px; background: #fff; position: relative; }
+        .pro-input { border: 2px solid #f1f5f9; padding: 12px; border-radius: 12px; font-weight: 600; }
+        .pro-btn { border: none; padding: 15px; border-radius: 12px; font-weight: 900; color: #fff; }
+        .small-label { font-size: 0.7rem; font-weight: 800; color: ${s.slate}; margin-bottom: 5px; }
+        .modal-custom-close { position: absolute; top: 15px; right: 15px; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in-up { animation: fadeInUp 0.4s ease-out; }
+
+        @media (max-width: 991px) {
+          .modal-grid { grid-template-columns: 1fr; }
+          .modal-sidebar { padding: 20px; }
+        }
+      `})]})};export{y as default};

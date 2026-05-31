@@ -1,0 +1,917 @@
+import{
+  j as e,
+  r
+}from"./vendor-cbZc9Uze.js";
+import{
+  M as o,
+  a as l
+}from"./vendor-ui-Bf1prFm1.js";
+const v=({
+  show:n,
+  onHide:s,
+  project:a
+})=>a?e.jsxs(o,
+  {
+  show:n,
+  onHide:s,
+  size:"lg",
+  centered:!0,
+  contentClassName:"border-0 rounded-5 shadow-lg overflow-hidden",
+  children:[e.jsx(o.Header,
+  {
+  closeButton:!0,
+  className:"bg-dark text-white border-0 px-4 py-3",
+  children:e.jsxs(o.Title,
+  {
+  className:"fw-bold d-flex align-items-center",
+  children:[e.jsx("i",
+  {
+  className:"bi bi-rocket-takeoff text-orange me-2"
+}),
+  a.title]
+})
+}),
+  e.jsx(o.Body,
+  {
+  className:"p-0",
+  children:e.jsxs("div",
+  {
+  className:"row g-0",
+  children:[e.jsx("div",
+  {
+  className:"col-12 border-bottom",
+  children:e.jsx("div",
+  {
+  className:"position-relative overflow-hidden",
+  style:{
+  maxHeight:"400px"
+},
+  children:e.jsx("img",
+  {
+  src:a.image,
+  className:"img-fluid w-100 object-fit-cover shadow-sm transition-hover",
+  alt:a.title,
+  style:{
+  transition:"transform 0.5s ease"
+}
+})
+})
+}),
+  e.jsxs("div",
+  {
+  className:"col-12 p-4 p-md-5 bg-light",
+  children:[e.jsxs("div",
+  {
+  className:"d-flex align-items-center mb-3",
+  children:[e.jsx("div",
+  {
+  className:"bg-orange p-2 rounded-3 me-3 text-white",
+  children:e.jsx("i",
+  {
+  className:"bi bi-info-circle-fill"
+})
+}),
+  e.jsx("h5",
+  {
+  className:"fw-bold mb-0",
+  children:"Project Overview"
+})]
+}),
+  e.jsx("p",
+  {
+  className:"text-muted leading-relaxed mb-4",
+  children:a.details||"A deep dive into the engineering and creative process behind this project."
+}),
+  e.jsx("h6",
+  {
+  className:"fw-bold text-uppercase small text-orange mb-3 tracking-widest",
+  children:"Technologies Stack"
+}),
+  e.jsx("div",
+  {
+  className:"d-flex flex-wrap gap-2 mb-4",
+  children:a.tech&&a.tech.map((c,
+  i)=>e.jsx("span",
+  {
+  className:"px-3 py-2 rounded-pill bg-white border border-secondary border-opacity-25 text-dark small fw-medium shadow-sm",
+  children:c
+},
+  i))
+})]
+})]
+})
+}),
+  e.jsxs(o.Footer,
+  {
+  className:"bg-white border-0 px-4 py-4 d-flex justify-content-between",
+  children:[e.jsxs("div",
+  {
+  className:"d-flex gap-2",
+  children:[a.liveLink&&e.jsxs(l,
+  {
+  variant:"dark",
+  href:a.liveLink,
+  target:"_blank",
+  className:"rounded-pill px-4 fw-bold",
+  children:[e.jsx("i",
+  {
+  className:"bi bi-globe2 me-2"
+}),
+  "Live Demo"]
+}),
+  a.gitLink&&e.jsxs(l,
+  {
+  variant:"outline-dark",
+  href:a.gitLink,
+  target:"_blank",
+  className:"rounded-pill px-4 fw-bold",
+  children:[e.jsx("i",
+  {
+  className:"bi bi-github me-2"
+}),
+  "Code"]
+})]
+}),
+  e.jsx(l,
+  {
+  variant:"link",
+  className:"text-muted text-decoration-none fw-bold",
+  onClick:s,
+  children:"Close"
+})]
+}),
+  e.jsx("style",
+  {
+  jsx:!0,
+  children:`
+        .text-orange {
+   color: #eb7604;
+ 
+}
+        .bg-orange {
+   background-color: #eb7604;
+ 
+}
+        .tracking-widest {
+   letter-spacing: 0.1em;
+ 
+}
+        .leading-relaxed {
+   line-height: 1.8;
+ 
+}
+        .object-fit-cover {
+   object-fit: cover;
+ 
+}
+        
+        .transition-hover:hover {
+  
+          transform: scale(1.03);
+
+        
+}
+
+        /* Custom scrollbar for long details */
+        .modal-body::-webkit-scrollbar {
+  
+          width: 6px;
+
+        
+}
+        .modal-body::-webkit-scrollbar-thumb {
+  
+          background-color: #eb7604;
+
+          border-radius: 10px;
+
+        
+}
+      `
+})]
+}):null,
+  P=()=>{
+  const[n,
+  s]=r.useState(!1),
+  [a,
+  c]=r.useState(null),
+  [i,
+  m]=r.useState("All"),
+  [h,
+  g]=r.useState(!1);
+r.useEffect(()=>{
+  g(!0)
+},
+  []);
+const b=["All",
+  "Web App",
+  "System",
+  "IT Tool",
+  "Fintech",
+  "AI"],
+  f=`https://wa.me/250791767725?text=${
+  encodeURIComponent("Hello! I just viewed your portfolio projects. I'm interested in discussing a new project idea.")
+}`,
+  d=[{
+  id:1,
+  category:"Web App",
+  title:"E-Commerce Dashboard",
+  description:"Advanced admin panel for product inventory,
+   order processing,
+   and sales analytics.",
+  tech:["React",
+  "Chart.js",
+  "Node.js",
+  "Tailwind"],
+  image:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+  details:"Built with React and integrated with Stripe for payment processing. Features role-based access and real-time sales tracking.",
+  accent:"#eb7604"
+},
+  {
+  id:2,
+  category:"System",
+  title:"School Management",
+  description:"Comprehensive digital infrastructure for student records,
+   attendance,
+   and grading.",
+  tech:["Laravel",
+  "MySQL",
+  "Bootstrap 5"],
+  image:"https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2104&auto=format&fit=crop",
+  details:"Deployed for a local school in Kigali. Includes automated report generation and secure parent-teacher portals.",
+  accent:"#b6252a"
+},
+  {
+  id:3,
+  category:"Fintech",
+  title:"Payment Gateway API",
+  description:"Secure transaction processing engine for local and international payment methods.",
+  tech:["Node.js",
+  "Redis",
+  "PostgreSQL"],
+  image:"https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
+  details:"Built to handle high-concurrency transactions with built-in fraud detection and automated reconciliation.",
+  accent:"#e4973b"
+},
+  {
+  id:4,
+  category:"AI",
+  title:"Customer Sentiment Bot",
+  description:"AI-driven tool for analyzing customer reviews and support tickets in real-time.",
+  tech:["Python",
+  "TensorFlow",
+  "FastAPI"],
+  image:"https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
+  details:"Uses Natural Language Processing to categorize customer emotions,
+   helping brands improve service response.",
+  accent:"#0f172a"
+},
+  {
+  id:5,
+  category:"IT Tool",
+  title:"Network Monitor Pro",
+  description:"System utility for monitoring server uptime,
+   latency,
+   and resource allocation.",
+  tech:["Python",
+  "Docker",
+  "Grafana"],
+  image:"https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2026&auto=format&fit=crop",
+  details:"Used for infrastructure health checks. Sends instant alerts via Telegram when downtime is detected.",
+  accent:"#0f172a"
+},
+  {
+  id:6,
+  category:"System",
+  title:"Smart Warehouse ERP",
+  description:"Inventory tracking system with QR code integration and automated restock alerts.",
+  tech:["PHP",
+  "MySQL",
+  "JavaScript"],
+  image:"https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
+  details:"Optimized for logistics companies. Tracks item movement from intake to delivery with 99.9% accuracy.",
+  accent:"#eb7604"
+},
+  {
+  id:7,
+  category:"Web App",
+  title:"HealthCare Portal",
+  description:"Telemedicine platform connecting patients with specialists for remote consultations.",
+  tech:["Next.js",
+  "WebRTC",
+  "Firebase"],
+  image:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop",
+  details:"Features end-to-end encrypted video calls and an integrated digital prescription system.",
+  accent:"#b6252a"
+},
+  {
+  id:8,
+  category:"AI",
+  title:"Auto-Crop Vision Tool",
+  description:"Machine learning tool for automatic image processing and object background removal.",
+  tech:["Python",
+  "OpenCV",
+  "PyTorch"],
+  image:"https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=2070&auto=format&fit=crop",
+  details:"Designed for photographers and e-commerce sellers to batch process thousands of images in minutes.",
+  accent:"#e4973b"
+},
+  {
+  id:9,
+  category:"Fintech",
+  title:"Crypto Portfolio Tracker",
+  description:"Live dashboard for tracking multi-chain assets and historical performance data.",
+  tech:["React",
+  "Web3.js",
+  "Coingecko API"],
+  image:"https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=1974&auto=format&fit=crop",
+  details:"Provides real-time price updates and profit/loss calculations for over 5,
+  000 different digital assets.",
+  accent:"#0f172a"
+},
+  {
+  id:10,
+  category:"IT Tool",
+  title:"Security Audit Script",
+  description:"Automated script for scanning server vulnerabilities and outdated dependencies.",
+  tech:["Bash",
+  "Nmap",
+  "Go"],
+  image:"https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
+  details:"A must-have for SysAdmins. Generates a detailed PDF report of security risks within an IT network.",
+  accent:"#eb7604"
+},
+  {
+  id:11,
+  category:"Web App",
+  title:"Booking Engine",
+  description:"Centralized reservation system for hotels,
+   car rentals,
+   and tour packages.",
+  tech:["Laravel",
+  "Vue.js",
+  "Postgres"],
+  image:"https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?q=80&w=2070&auto=format&fit=crop",
+  details:"Integrated with global distribution systems (GDS) to provide real-time availability across the globe.",
+  accent:"#b6252a"
+},
+  {
+  id:12,
+  category:"System",
+  title:"Church Management",
+  description:"Management system for memberships,
+   contributions,
+   and event scheduling.",
+  tech:["React",
+  "Supabase",
+  "Bootstrap"],
+  image:"https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=2073&auto=format&fit=crop",
+  details:"Streamlines administrative tasks and improves communication with church members via SMS integration.",
+  accent:"#e4973b"
+}],
+  p=i==="All"?d:d.filter(t=>t.category===i),
+  x=t=>{
+  c(t),
+  s(!0)
+};
+return e.jsxs("section",
+  {
+  id:"projects",
+  className:"py-5 position-relative bg-white overflow-hidden",
+  children:[e.jsx("div",
+  {
+  className:"bg-blob-1"
+}),
+  e.jsx("div",
+  {
+  className:"bg-blob-2"
+}),
+  e.jsxs("div",
+  {
+  className:"container py-lg-5 position-relative z-1",
+  children:[e.jsxs("div",
+  {
+  className:`text-center mb-5 transition-up ${
+  h?"active":""
+}`,
+  children:[e.jsxs("div",
+  {
+  className:"d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3 glass-badge",
+  children:[e.jsx("span",
+  {
+  className:"dot"
+}),
+  e.jsx("span",
+  {
+  className:"text-uppercase fw-bold ls-1",
+  style:{
+  fontSize:"0.75rem",
+  color:"#64748b"
+},
+  children:"Our Portfolio"
+})]
+}),
+  e.jsxs("h2",
+  {
+  className:"display-3 fw-900 mb-3",
+  style:{
+  color:"#0f172a",
+  letterSpacing:"-2px"
+},
+  children:["Innovating ",
+  e.jsx("span",
+  {
+  className:"text-orange-gradient",
+  children:"Digital"
+}),
+  " Solutions"]
+}),
+  e.jsx("p",
+  {
+  className:"text-muted mx-auto mb-5 fw-500",
+  style:{
+  maxWidth:"600px",
+  fontSize:"1.1rem"
+},
+  children:"A showcase of high-performance systems and creative web applications designed to scale businesses."
+}),
+  e.jsx("div",
+  {
+  className:"filter-wrapper p-2 bg-light rounded-pill d-inline-flex flex-wrap justify-content-center gap-1 shadow-sm mb-5",
+  children:b.map(t=>e.jsxs("button",
+  {
+  onClick:()=>m(t),
+  className:`btn rounded-pill px-4 py-2 fw-bold border-0 transition-all ${
+  i===t?"bg-white shadow-sm text-dark":"text-muted hover-bg-gray"
+}`,
+  style:{
+  fontSize:"0.9rem"
+},
+  children:[t,
+  i===t&&e.jsx("span",
+  {
+  className:"ms-2 badge rounded-pill bg-dark text-white",
+  style:{
+  fontSize:"0.7rem"
+},
+  children:p.length
+})]
+},
+  t))
+})]
+}),
+  e.jsx("div",
+  {
+  className:"row g-4 justify-content-center",
+  children:p.map((t,
+  u)=>e.jsx("div",
+  {
+  className:"col-md-6 col-lg-4 project-item",
+  style:{
+  animationDelay:`${
+  u*.1
+}s`
+},
+  children:e.jsxs("div",
+  {
+  className:"modern-card",
+  children:[e.jsxs("div",
+  {
+  className:"image-container",
+  children:[e.jsx("img",
+  {
+  src:t.image,
+  className:"card-img-pro",
+  alt:t.title,
+  loading:"lazy"
+}),
+  e.jsx("div",
+  {
+  className:"card-overlay-glass",
+  children:e.jsxs("button",
+  {
+  className:"btn-explore",
+  onClick:()=>x(t),
+  children:[e.jsx("span",
+  {
+  children:"View Case Study"
+}),
+  e.jsx("i",
+  {
+  className:"bi bi-arrow-right"
+})]
+})
+}),
+  e.jsx("div",
+  {
+  className:"category-tag-floating",
+  style:{
+  color:t.accent
+},
+  children:t.category
+})]
+}),
+  e.jsxs("div",
+  {
+  className:"card-content",
+  children:[e.jsx("h4",
+  {
+  className:"card-title-pro",
+  children:t.title
+}),
+  e.jsx("p",
+  {
+  className:"card-desc-pro text-muted",
+  children:t.description
+}),
+  e.jsx("div",
+  {
+  className:"tech-stack-container",
+  children:t.tech.map((y,
+  w)=>e.jsx("span",
+  {
+  className:"tech-tag-pro",
+  children:y
+},
+  w))
+})]
+})]
+})
+},
+  t.id))
+}),
+  e.jsx("div",
+  {
+  className:"mt-5 pt-5",
+  children:e.jsx("div",
+  {
+  className:"premium-cta-card",
+  children:e.jsxs("div",
+  {
+  className:"cta-content position-relative z-2",
+  children:[e.jsx("h2",
+  {
+  className:"display-4 fw-900 text-white mb-3",
+  children:"Have a vision?"
+}),
+  e.jsx("p",
+  {
+  className:"text-white opacity-75 mb-5 fw-500",
+  style:{
+  fontSize:"1.2rem",
+  maxWidth:"600px"
+},
+  children:"Let’s collaborate to turn your technical requirements into an industry-leading reality."
+}),
+  e.jsxs("div",
+  {
+  className:"d-flex flex-wrap gap-3",
+  children:[e.jsxs("a",
+  {
+  href:"#contact",
+  className:"btn-cta-primary",
+  children:["Launch Your Project ",
+  e.jsx("i",
+  {
+  className:"bi bi-rocket-takeoff ms-2"
+})]
+}),
+  e.jsxs("a",
+  {
+  href:f,
+  target:"_blank",
+  rel:"noreferrer",
+  className:"btn-cta-secondary",
+  children:[e.jsx("i",
+  {
+  className:"bi bi-whatsapp me-2"
+}),
+  " WhatsApp Consultation"]
+})]
+})]
+})
+})
+}),
+  a&&e.jsx(v,
+  {
+  show:n,
+  onHide:()=>s(!1),
+  project:a,
+  accentColor:a.accent
+})]
+}),
+  e.jsx("style",
+  {
+  jsx:!0,
+  children:`
+        .fw-900 {
+   font-weight: 800;
+ 
+}
+        .ls-1 {
+   letter-spacing: 1px;
+ 
+}
+
+        .bg-blob-1 {
+   position: absolute;
+ top: -10%;
+ left: -5%;
+ width: 40%;
+ height: 50%;
+ background: #eb760410;
+ filter: blur(120px);
+ border-radius: 50%;
+ z-index: 0;
+ 
+}
+        .bg-blob-2 {
+   position: absolute;
+ bottom: 5%;
+ right: -5%;
+ width: 35%;
+ height: 45%;
+ background: #b6252a10;
+ filter: blur(120px);
+ border-radius: 50%;
+ z-index: 0;
+ 
+}
+
+        .glass-badge {
+   background: #f8fafc;
+ border: 1px solid #e2e8f0;
+ 
+}
+        .dot {
+   width: 8px;
+ height: 8px;
+ background: #eb7604;
+ border-radius: 50%;
+ animation: pulse 2s infinite;
+ 
+}
+        .text-orange-gradient {
+   background: linear-gradient(135deg,
+   #eb7604,
+   #e4973b);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ 
+}
+
+        .modern-card {
+   background: #fff;
+ border-radius: 24px;
+ border: 1px solid #f1f5f9;
+ height: 100%;
+ transition: all 0.4s cubic-bezier(0.4,
+   0,
+   0.2,
+   1);
+ overflow: hidden;
+ position: relative;
+ 
+}
+        .modern-card:hover {
+   transform: translateY(-12px);
+ box-shadow: 0 30px 60px -15px rgba(0,
+  0,
+  0,
+  0.1);
+ border-color: #eb760430;
+ 
+}
+        
+        .image-container {
+   position: relative;
+ height: 260px;
+ overflow: hidden;
+ margin: 12px;
+ border-radius: 18px;
+ 
+}
+        .card-img-pro {
+   width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transition: transform 0.6s ease;
+ 
+}
+        .modern-card:hover .card-img-pro {
+   transform: scale(1.08);
+ 
+}
+
+        .card-overlay-glass {
+   position: absolute;
+ inset: 0;
+ background: rgba(15,
+   23,
+   42,
+   0.4);
+ backdrop-filter: blur(4px);
+ opacity: 0;
+ transition: all 0.3s ease;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ 
+}
+        .modern-card:hover .card-overlay-glass {
+   opacity: 1;
+ 
+}
+
+        .btn-explore {
+   background: #fff;
+ color: #0f172a;
+ border: none;
+ padding: 12px 24px;
+ border-radius: 12px;
+ font-weight: 700;
+ font-size: 0.9rem;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ transform: translateY(20px);
+ transition: 0.4s ease;
+ 
+}
+        .modern-card:hover .btn-explore {
+   transform: translateY(0);
+ 
+}
+
+        .category-tag-floating {
+   position: absolute;
+ top: 15px;
+ right: 15px;
+ background: rgba(255,
+  255,
+  255,
+  0.9);
+ backdrop-filter: blur(10px);
+ padding: 6px 14px;
+ border-radius: 10px;
+ font-weight: 800;
+ font-size: 0.75rem;
+ box-shadow: 0 4px 12px rgba(0,
+  0,
+  0,
+  0.05);
+ 
+}
+
+        .card-content {
+   padding: 12px 24px 24px;
+ 
+}
+        .card-title-pro {
+   font-weight: 800;
+ font-size: 1.4rem;
+ color: #0f172a;
+ margin-bottom: 10px;
+ 
+}
+        .card-desc-pro {
+   font-size: 0.95rem;
+ line-height: 1.6;
+ margin-bottom: 20px;
+ 
+}
+        .tech-tag-pro {
+   font-size: 0.7rem;
+ font-weight: 800;
+ color: #64748b;
+ background: #f8fafc;
+ padding: 6px 12px;
+ border-radius: 8px;
+ text-transform: uppercase;
+ margin-right: 8px;
+ border: 1px solid #f1f5f9;
+ display: inline-block;
+ margin-bottom: 5px;
+ 
+}
+
+        .premium-cta-card {
+   background: #0f172a;
+ border-radius: 40px;
+ padding: 80px 60px;
+ position: relative;
+ overflow: hidden;
+ 
+}
+        .btn-cta-primary {
+   background: #eb7604;
+ color: #fff;
+ text-decoration: none;
+ padding: 18px 40px;
+ border-radius: 16px;
+ font-weight: 800;
+ transition: all 0.3s ease;
+ display: inline-flex;
+ align-items: center;
+ 
+}
+        .btn-cta-primary:hover {
+   background: #e4973b;
+ transform: translateY(-3px);
+ box-shadow: 0 15px 30px rgba(235,
+   118,
+   4,
+   0.3);
+ color: #fff;
+ 
+}
+        .btn-cta-secondary {
+   background: rgba(255,
+  255,
+  255,
+  0.05);
+ color: #fff;
+ text-decoration: none;
+ padding: 18px 40px;
+ border-radius: 16px;
+ font-weight: 800;
+ transition: all 0.3s ease;
+ border: 1px solid rgba(255,
+  255,
+  255,
+  0.1);
+ display: inline-flex;
+ align-items: center;
+ 
+}
+        .btn-cta-secondary:hover {
+   background: rgba(255,
+  255,
+  255,
+  0.15);
+ color: #fff;
+ 
+}
+
+        @keyframes pulse {
+   0% {
+   opacity: 0.4;
+ transform: scale(1);
+ 
+} 50% {
+   opacity: 1;
+ transform: scale(1.2);
+ 
+} 100% {
+   opacity: 0.4;
+ transform: scale(1);
+ 
+} 
+}
+        .project-item {
+   animation: slideInUp 0.6s cubic-bezier(0.2,
+   0,
+   0.2,
+   1) forwards;
+ opacity: 0;
+ 
+}
+        @keyframes slideInUp {
+   from {
+   opacity: 0;
+ transform: translateY(40px);
+ 
+} to {
+   opacity: 1;
+ transform: translateY(0);
+ 
+} 
+}
+
+        @media (max-width: 768px) {
+  
+          .display-3 {
+   font-size: 2.5rem;
+ 
+}
+          .premium-cta-card {
+   padding: 40px 30px;
+ text-align: center;
+ 
+}
+          .btn-cta-primary,
+   .btn-cta-secondary {
+   width: 100%;
+ justify-content: center;
+ 
+}
+        
+}
+      `
+})]
+})
+};
+export{
+  P as default
+};
+

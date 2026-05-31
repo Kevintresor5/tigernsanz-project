@@ -1,0 +1,101 @@
+import{r as n,j as e}from"./vendor-cbZc9Uze.js";const m=()=>{const a=n.useRef(null),t={goldenrod:"#e4973b",orange:"#eb7604",crimson:"#b6252a",dark:"#0f172a"},c=[{id:1,icon:"bi-code-slash",title:"Software Development",accent:t.orange,description:"Custom, scalable digital products built with modern frameworks.",items:["Web Applications","Mobile Solutions","Custom APIs"]},{id:2,icon:"bi-mortarboard",title:"Tech Training",accent:t.goldenrod,description:"Empowering the next generation with professional digital literacy.",items:["Full-stack Development","Essential Computer Skills","Digital Literacy"]},{id:3,icon:"bi-laptop",title:"Professional IT Support",accent:t.crimson,description:"Reliable hardware and software maintenance for your business.",items:["Network Security","Hardware Repair","System Recovery"]},{id:4,icon:"bi-gear-wide-connected",title:"Digital Consulting",accent:t.orange,description:"Strategic roadmap for your business digital transformation.",items:["Cloud Strategy","Workflow Automation","Tech Audits"]}],d=[{title:"Consult",desc:"Analyzing your goals.",icon:"bi-chat-left-dots"},{title:"Plan",desc:"Strategizing the path.",icon:"bi-map"},{title:"Execute",desc:"Building the solution.",icon:"bi-cpu"},{title:"Support",desc:"Continuous growth.",icon:"bi-headset"}];return n.useEffect(()=>{const s={threshold:.1,rootMargin:"0px 0px -50px 0px"},r=new IntersectionObserver(i=>{i.forEach(l=>{l.isIntersecting&&l.target.classList.add("reveal-visible")})},s);return a.current.querySelectorAll(".reveal-on-scroll").forEach(i=>r.observe(i)),()=>r.disconnect()},[]),e.jsxs("section",{ref:a,id:"services",className:"services-section py-5 bg-white position-relative",style:{scrollMarginTop:"80px"},children:[e.jsx("div",{className:"bg-blur blur-1",style:{backgroundColor:t.orange}}),e.jsx("div",{className:"bg-blur blur-2",style:{backgroundColor:t.crimson}}),e.jsxs("div",{className:"container py-lg-5 position-relative z-1",children:[e.jsxs("header",{className:"text-center mb-5 reveal-on-scroll",children:[e.jsx("h6",{className:"text-uppercase fw-bold ls-3 mb-3",style:{color:t.orange},children:"Our Capabilities"}),e.jsxs("h2",{className:"display-4 fw-bold mb-3 text-dark",children:["Comprehensive ",e.jsx("span",{className:"text-gradient",children:"IT Ecosystem"})]}),e.jsx("div",{className:"mx-auto accent-line",style:{backgroundColor:t.crimson}})]}),e.jsx("div",{className:"row g-4 mb-5 pb-lg-5",children:c.map((s,r)=>e.jsx("div",{className:"col-12 col-md-6 col-lg-3 reveal-on-scroll",style:{transitionDelay:`${r*100}ms`},children:e.jsxs("div",{className:"service-card h-100 border-0 p-4 rounded-5",children:[e.jsx("div",{className:"icon-wrapper mb-4 shadow-sm",style:{backgroundColor:s.accent},children:e.jsx("i",{className:`bi ${s.icon} text-white fs-3`})}),e.jsx("h3",{className:"h5 fw-bold mb-3",style:{color:t.dark},children:s.title}),e.jsx("p",{className:"text-muted small mb-4",children:s.description}),e.jsx("div",{className:"mt-auto",children:s.items.map((o,i)=>e.jsxs("div",{className:"d-flex align-items-center mb-2 small fw-bold text-dark opacity-75 list-item-hover",children:[e.jsx("i",{className:"bi bi-arrow-right-short fs-5 me-1",style:{color:s.accent}}),e.jsx("span",{children:o})]},i))})]})},s.id))}),e.jsxs("div",{className:"row mt-5 pt-lg-5 text-center g-4 justify-content-center reveal-on-scroll",children:[e.jsx("div",{className:"col-12 mb-4",children:e.jsxs("h3",{className:"fw-bold",children:["The ",e.jsx("span",{style:{color:t.crimson},children:"InfinityMura"})," Workflow"]})}),d.map((s,r)=>e.jsxs("div",{className:"col-6 col-md-3 position-relative px-3",children:[e.jsxs("div",{className:"process-node mx-auto mb-3",style:{borderColor:t.goldenrod},children:[e.jsx("i",{className:`bi ${s.icon} fs-4`,style:{color:t.orange}}),e.jsx("div",{className:"node-count",style:{backgroundColor:t.crimson},children:r+1})]}),e.jsx("h4",{className:"h6 fw-bold mb-2",children:s.title}),e.jsx("p",{className:"text-muted small px-lg-2 d-none d-sm-block",children:s.desc}),r<3&&e.jsx("div",{className:"connector d-none d-lg-block"})]},r))]}),e.jsx("div",{className:"mt-5 pt-5 text-center reveal-on-scroll",children:e.jsx("div",{className:"marquee-container py-4",children:e.jsxs("div",{className:"marquee-track",children:[["MS Office","Web Design","Hardware","React","Laravel","Security","Cloud","Database"].map((s,r)=>e.jsx("span",{className:"tech-tag mx-4 fw-bold",children:s},r)),["MS Office","Web Design","Hardware","React","Laravel","Security","Cloud","Database"].map((s,r)=>e.jsx("span",{className:"tech-tag mx-4 fw-bold",children:s},`dup-${r}`))]})})})]}),e.jsx("style",{jsx:!0,children:`
+        .services-section { overflow: hidden; }
+        .ls-3 { letter-spacing: 3px; }
+        
+        .accent-line {
+          width: 60px; height: 4px; border-radius: 10px;
+        }
+
+        .text-gradient {
+          background: linear-gradient(45deg, ${t.orange}, ${t.crimson});
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        /* Fixed the "White Space" issue by ensuring visibility fallback */
+        .reveal-on-scroll {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          will-change: opacity, transform;
+        }
+        
+        .reveal-visible {
+          opacity: 1 !important;
+          transform: translateY(0) !important;
+        }
+
+        .service-card {
+          background: #ffffff;
+          border: 1px solid #f1f5f9 !important;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+          transition: all 0.3s ease;
+          position: relative;
+          z-index: 1;
+        }
+
+        .service-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+          border-color: ${t.orange}44 !important;
+        }
+
+        .icon-wrapper {
+          width: 60px; height: 60px;
+          border-radius: 18px;
+          display: flex; align-items: center; justify-content: center;
+        }
+
+        /* Process Steps */
+        .process-node {
+          width: 70px; height: 70px;
+          border: 2px solid; border-radius: 22px;
+          display: flex; align-items: center; justify-content: center;
+          position: relative; background: white;
+          z-index: 2;
+        }
+
+        .node-count {
+          position: absolute; top: -5px; right: -5px;
+          width: 24px; height: 24px;
+          color: white; border-radius: 50%;
+          font-weight: bold; font-size: 0.75rem;
+          display: flex; align-items: center; justify-content: center;
+        }
+
+        .connector {
+          position: absolute; top: 35px; left: calc(50% + 40px);
+          width: calc(100% - 80px); height: 2px;
+          background: #e2e8f0;
+          z-index: 1;
+        }
+
+        /* Marquee */
+        .marquee-container { 
+          overflow: hidden; 
+          white-space: nowrap; 
+          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); 
+        }
+        .marquee-track { 
+          display: inline-block; 
+          animation: scroll 25s linear infinite; 
+        }
+        .tech-tag { color: #94a3b8; font-size: 1.2rem; }
+
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        .bg-blur {
+          position: absolute; width: 400px; height: 400px;
+          border-radius: 50%; filter: blur(100px); opacity: 0.05; z-index: 0;
+        }
+        .blur-1 { top: -100px; left: -100px; }
+        .blur-2 { bottom: -100px; right: -100px; }
+
+        @media (max-width: 768px) {
+          .display-4 { font-size: 2rem; }
+          .reveal-on-scroll { opacity: 1; transform: none; transition: none; } /* Disable animations on small mobile for performance */
+        }
+      `})]})};export{m as default};

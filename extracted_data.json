@@ -1,0 +1,97 @@
+{
+  "services": [],
+  "courseTitles": [
+    "Web Development",
+    "Advanced Laravel",
+    "IT Support"
+  ],
+  "studentReviews": [],
+  "projects": [
+    {
+      "title": "E-Commerce Dashboard",
+      "category": "Web App",
+      "description": "Advanced admin panel for product inventory, order processing, and sales analytics."
+    },
+    {
+      "title": "School Management",
+      "category": "System",
+      "description": "Comprehensive digital infrastructure for student records, attendance, and grading."
+    },
+    {
+      "title": "Payment Gateway API",
+      "category": "Fintech",
+      "description": "Secure transaction processing engine for local and international payment methods."
+    },
+    {
+      "title": "Customer Sentiment Bot",
+      "category": "AI",
+      "description": "AI-driven tool for analyzing customer reviews and support tickets in real-time."
+    },
+    {
+      "title": "Network Monitor Pro",
+      "category": "IT Tool",
+      "description": "System utility for monitoring server uptime, latency, and resource allocation."
+    },
+    {
+      "title": "Smart Warehouse ERP",
+      "category": "System",
+      "description": "Inventory tracking system with QR code integration and automated restock alerts."
+    },
+    {
+      "title": "HealthCare Portal",
+      "category": "Web App",
+      "description": "Telemedicine platform connecting patients with specialists for remote consultations."
+    },
+    {
+      "title": "Auto-Crop Vision Tool",
+      "category": "AI",
+      "description": "Machine learning tool for automatic image processing and object background removal."
+    },
+    {
+      "title": "Crypto Portfolio Tracker",
+      "category": "Fintech",
+      "description": "Live dashboard for tracking multi-chain assets and historical performance data."
+    },
+    {
+      "title": "Security Audit Script",
+      "category": "IT Tool",
+      "description": "Automated script for scanning server vulnerabilities and outdated dependencies."
+    },
+    {
+      "title": "Booking Engine",
+      "category": "Web App",
+      "description": "Centralized reservation system for hotels, car rentals, and tour packages."
+    },
+    {
+      "title": "Church Management",
+      "category": "System",
+      "description": "Management system for memberships, contributions, and event scheduling."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Jean Marie Viane",
+      "role": "CEO, KGL Logistics",
+      "company": "",
+      "text": ""
+    },
+    {
+      "name": "Emmanuel Niyonzima",
+      "role": "Fullstack Developer",
+      "company": "",
+      "text": ""
+    },
+    {
+      "name": "TechStart Rwanda",
+      "role": "Startup Incubator",
+      "company": "",
+      "text": ""
+    },
+    {
+      "name": "Clarisse Umuhoza",
+      "role": "E-commerce Vendor",
+      "company": "",
+      "text": ""
+    }
+  ]
+}
